@@ -1,0 +1,21 @@
+# Служебное
+.DS_Store
+.idea/
+.venv/
+node_modules/
+__pycache__/
+
+# Рабочие файлы разработки (не для сайта)
+prototype-*/
+benchmark-*/
+preview-*
+survey-*
+pathway-*
+*.csv
+*.pdf
+
+# Превью визуализаций (отдельные файлы, не нужны на сайте)
+flow-oplata-animated.html
+flow-oplata-saas.html
+hyp-oplata-saas.html
+problem-konstruktor-saas.html

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="checkFace" gradientUnits="userSpaceOnUse" x1="34" y1="34" x2="92" y2="88">
+      <stop offset="0" stop-color="#86D9A0"/>
+      <stop offset="0.45" stop-color="#22A052"/>
+      <stop offset="1" stop-color="#15803D"/>
+    </linearGradient>
+    <linearGradient id="checkDepth" gradientUnits="userSpaceOnUse" x1="34" y1="40" x2="92" y2="94">
+      <stop offset="0" stop-color="#15803D"/>
+      <stop offset="1" stop-color="#11632F"/>
+    </linearGradient>
+    <linearGradient id="checkSheen" gradientUnits="userSpaceOnUse" x1="40" y1="52" x2="78" y2="70">
+      <stop offset="0" stop-color="#86D9A0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#86D9A0" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="shadowGreen" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#11632F" stop-opacity="0.26"/>
+      <stop offset="0.7" stop-color="#11632F" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#11632F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="specGreen" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#86D9A0" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#86D9A0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="61" cy="98" rx="30" ry="7.5" fill="url(#shadowGreen)"/>
+  <path d="M38 68 L54 84 L84 50" fill="none" stroke="url(#checkDepth)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38 62 L54 78 L84 44" fill="none" stroke="url(#checkFace)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40.5 59.5 L54 73 L81.5 42.5" fill="none" stroke="url(#checkSheen)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
+  <ellipse cx="41.5" cy="56.5" rx="4.5" ry="2.8" transform="rotate(-42 41.5 56.5)" fill="url(#specGreen)"/>
+</svg>

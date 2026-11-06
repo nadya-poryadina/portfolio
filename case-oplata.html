@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оплата обучения — кейс · Надя Порядина</title>
+  <meta name="description" content="Кейс: Оплата обучения.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v37">
+  <style>
+    .problem-headline{font-size:32px;line-height:1.25;color:var(--ink);font-weight:500;margin:4px 0 8px}
+    .problem-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+    .pm{background:#F7F9FD;border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+    .pm-v{font-size:56px;line-height:1;font-weight:500;color:#ED131C;letter-spacing:-.02em}
+    .pm-k{font-size:14px;line-height:1.45;color:var(--ink-2)}
+    .problem-conclusion{margin-top:16px;background:#252525;color:#fff;border-radius:12px;padding:20px 24px;font-size:18px;line-height:1.45}
+    @media (max-width:640px){.problem-metrics{grid-template-columns:1fr}.problem-headline{font-size:26px}.pm-v{font-size:44px}}
+  #body{display:contents}
+  .list p{color:var(--ink)}
+  .cell-kicker{font-size:24px;line-height:1.2;color:var(--ink);text-transform:none;letter-spacing:normal;font-weight:500}
+    @media (max-width:1024px){ .nums{grid-template-columns:repeat(3,1fr)} }
+    @media (max-width:640px){ .nums{grid-template-columns:1fr} }
+      .list p{font-size:16px;color:var(--ink)}
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="side">
+    <a class="logo" href="index.html" aria-label="На главную">
+      <span class="logo-mark">Н</span>
+      <span>nadya<em>.po</em></span>
+    </a>
+    <nav class="side-nav" aria-label="Разделы кейса">
+      <a href="#kontekst">Контекст</a>
+      <a href="#problema">Проблема</a>
+      <a href="#issledovanie-1-glubi">Исследование 1. глубинные интервью со студентами</a>
+      <a href="#issledovanie-2-konku">Исследование 2. конкурентный анализ</a>
+      <a href="#celi">Цели</a>
+      <a href="#gipotezy">Гипотезы</a>
+      <a href="#ogranicheniya-platez">Ограничения платёжных сценариев</a>
+      <a href="#yuzabiliti-testirova">Юзабилити-тестирование</a>
+      <a href="#chto-obnaruzhila-po-">Что обнаружила по итогам юзабилити-теста</a>
+      <a href="#reshenie">Решение</a>
+      <a href="#validaciya-rezultato">Результаты</a>
+      <a href="#itog-ke-sa">Итог кейса</a>
+    </nav>
+  </aside>
+  <main class="bento">
+    <div class="page-top">
+      <a class="back" href="index.html">← Главная</a>
+      <span class="crumb">Кейс · Синергия · Web · EdTech</span>
+    </div>
+    <section class="cell s12" id="start">
+      <h1 class="h1">Оплата обучения</h1>
+      <div class="nums" style="grid-template-columns:repeat(3,1fr);margin-top:8px">
+        <div class="num"><div class="v">83%</div><div class="k">платежей через сервис</div></div>
+        <div class="num"><div class="v">−47%</div><div class="k">ручной обработки</div></div>
+        <div class="num"><div class="v">4,5 мин</div><div class="k">медианное время оплаты</div></div>
+      </div>
+    </section>
+    <div id="body">
+    <img class="zoomable" src="assets/case-oplata-graphic.png" alt="Появился график платежей — экран сервиса" style="grid-column:span 12;cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+    <section class="cell s12" id="kontekst">
+      <span class="cell-kicker">Контекст</span>
+      <p class="cell-text primary">Сервис проектировался с нуля. До появления сервиса студенты оплачивали обучение вне личного кабинета: через переписку в мессенджерах со своим куратором.</p>
+      <p class="cell-text primary">В пиковый период поступления, с июля по октябрь, финансовые процессы затрагивали от 6 до 10 тысяч пользователей.</p>
+      <p class="cell-text primary">Моя роль: продуктовый дизайнер end-to-end. От исследования пользовательских потребностей и проектирования сценариев до проверки решений и передачи макетов в разработку.</p>
+    </section>
+    <section class="cell s12" id="problema">
+      <span class="cell-kicker">Проблема</span>
+      <h2 class="problem-headline" style="font-size:16px">💡 Оплата обучения зависела от ручной работы кураторов</h2>
+      <div class="problem-metrics">
+        <div class="pm"><div class="pm-v">100%</div><div class="pm-k">обращений по вопросам оплаты проходили через кураторов</div></div>
+        <div class="pm"><div class="pm-v">180</div><div class="pm-k">тикетов ежемесячно поступало в техподдержку по теме оплаты</div></div>
+        <div class="pm"><div class="pm-v">40%</div><div class="pm-k">рабочего времени кураторы тратили на ручные ответы по вопросам платежей</div></div>
+      </div>
+      <p class="cell-text primary sub-head" style="margin-top:16px">Последствия для студентов</p>
+      <ul class="list">
+        <li><p>Не понимали, сколько и когда нужно платить.</p></li>
+        <li><p>Не могли самостоятельно проверить статус платежа.</p></li>
+        <li><p>Допускали ошибки и просрочки при оплате.</p></li>
+      </ul>
+      <div class="problem-conclusion">«У студента не было единого места, где можно посмотреть финансовую информацию, оплатить обучение и проверить зачисление платежа»</div>
+    </section>
+    <section class="cell s12" id="issledovanie-1-glubi">
+      <span class="cell-kicker">Исследование 1. глубинные интервью со студентами</span>
+      <p class="cell-text primary">Чтобы разобраться, как устроен процесс оплаты на практике, я провела интервью с пятью студентами. Мне было важно восстановить путь от получения счёта до подтверждения оплаты.</p>
+<div class="flow-anim" style="margin:8px 0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 304 1600 292" preserveAspectRatio="xMidYMid meet" font-family="-apple-system, 'Onest', Arial, sans-serif">
+        <defs>
+          <filter id="lift" x="-25%" y="-25%" width="150%" height="150%">
+            <feDropShadow dx="0" dy="5" stdDeviation="12" flood-color="#30313B" flood-opacity="0.08"/>
+          </filter>
+          <filter id="liftSoft" x="-25%" y="-25%" width="150%" height="150%">
+            <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#30313B" flood-opacity="0.06"/>
+          </filter>
+          <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+            <circle cx="1.5" cy="1.5" r="1.2" fill="#E5E6EB"/>
+          </pattern>
+        </defs>
+      
+        <!-- Соединительные линии -->
+        <g id="links" class="flinks" stroke="#E5E6EB" stroke-width="2" fill="none" stroke-linecap="round">
+          <path d="M 386 450 h 24"/><path d="M 410 450 l -6 -5 m 6 5 l -6 5"/>
+          <path d="M 788 450 h 24"/><path d="M 812 450 l -6 -5 m 6 5 l -6 5"/>
+          <path d="M 1190 450 h 24"/><path d="M 1214 450 l -6 -5 m 6 5 l -6 5"/>
+        </g>
+      
+        <!-- КАРТОЧКА 1: Квитанция в чате -->
+        <g id="card-1" class="card fcard" style="--i:0">
+          <rect x="11" y="320" width="372" height="260" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5"/>
+          <rect x="29" y="338" width="196" height="224" rx="12" fill="none"/>
+          <rect x="29" y="338" width="56" height="20" rx="10" fill="#F4F5F7"/>
+          <text x="57" y="352" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ШАГ 1</text>
+          <text x="29" y="392" font-size="16" font-weight="600" fill="#30313B">Квитанция в чате<tspan x="29" dy="22" font-size="12.5" font-weight="400" fill="#858691">Куратор отправляет счёт вручную.</tspan><tspan x="29" dy="17" font-size="12.5" font-weight="400" fill="#858691">Документы живут в переписке.</tspan></text>
+          <g id="btn-1">
+            <rect x="29" y="500" width="140" height="32" rx="8" fill="#30313B"/>
+            <text x="99" y="520" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">Открыть чат</text>
+          </g>
+          <!-- правая иллюстрация: мини-чат -->
+          <g id="ui-1">
+            <rect x="225" y="338" width="140" height="224" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+            <rect x="225" y="338" width="140" height="26" rx="12" fill="#FFFFFF"/>
+            <line x1="225" y1="364" x2="365" y2="364" stroke="#E5E6EB" stroke-width="1.2"/>
+            <circle cx="241" cy="351" r="3" fill="#E5E6EB"/><circle cx="252" cy="351" r="3" fill="#E5E6EB"/><circle cx="263" cy="351" r="3" fill="#E5E6EB"/>
+            <circle cx="245" cy="392" r="9" fill="#E5E6EB"/>
+            <rect x="260" y="378" width="86" height="42" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2" filter="url(#liftSoft)"/>
+            <g transform="translate(267,386)">
+              <rect x="0" y="0" width="22" height="26" rx="3" fill="#F4F5F7" stroke="#E5E6EB" stroke-width="1"/>
+              <line x1="4" y1="7" x2="18" y2="7" stroke="#D6D7DE" stroke-width="1.6"/>
+              <line x1="4" y1="12" x2="13" y2="12" stroke="#D6D7DE" stroke-width="1.6"/>
+              <line x1="4" y1="18" x2="16" y2="18" stroke="#9670E8" stroke-width="1.6"/>
+            </g>
+            <line x1="296" y1="386" x2="336" y2="386" stroke="#E5E6EB" stroke-width="1.8"/>
+            <line x1="296" y1="393" x2="324" y2="393" stroke="#E5E6EB" stroke-width="1.8"/>
+            <rect x="260" y="432" width="60" height="24" rx="10" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+            <circle cx="276" cy="444" r="2.2" fill="#D6D7DE"/><circle cx="285" cy="444" r="2.2" fill="#D6D7DE"/><circle cx="294" cy="444" r="2.2" fill="#D6D7DE"/>
+            <rect x="225" y="476" width="140" height="86" rx="0" fill="none"/>
+            <rect x="233" y="486" width="124" height="66" rx="10" fill="none" stroke="#E5E6EB" stroke-width="1.2" stroke-dasharray="3 6"/>
+            <text x="295" y="524" text-anchor="middle" font-size="10" fill="#B9BAC2">история не сохраняется</text>
+          </g>
+        </g>
+      
+        <!-- КАРТОЧКА 2: Ручная оплата -->
+        <g id="card-2" class="card fcard" style="--i:1">
+          <rect x="413" y="320" width="372" height="260" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5"/>
+          <rect x="431" y="338" width="56" height="20" rx="10" fill="#F4F5F7"/>
+          <text x="459" y="352" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ШАГ 2</text>
+          <text x="431" y="392" font-size="16" font-weight="600" fill="#30313B">Ручная оплата<tspan x="431" dy="22" font-size="12.5" font-weight="400" fill="#858691">Студент вводит реквизиты</tspan><tspan x="431" dy="17" font-size="12.5" font-weight="400" fill="#858691">в приложении банка сам.</tspan></text>
+          <g id="btn-2">
+            <rect x="431" y="500" width="150" height="32" rx="8" fill="#30313B"/>
+            <text x="506" y="520" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">Ввести реквизиты</text>
+          </g>
+          <!-- правая иллюстрация: форма банка -->
+          <g id="ui-2">
+            <rect x="627" y="338" width="140" height="224" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+            <rect x="627" y="338" width="140" height="26" rx="12" fill="#FFFFFF"/>
+            <line x1="627" y1="364" x2="767" y2="364" stroke="#E5E6EB" stroke-width="1.2"/>
+            <text x="643" y="352" font-size="10" font-weight="600" fill="#858691">Перевод по реквизитам</text>
+            <text x="643" y="384" font-size="9" fill="#858691">Номер счёта</text>
+            <rect x="643" y="390" width="108" height="24" rx="6" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+            <line x1="650" y1="402" x2="668" y2="402" stroke="#30313B" stroke-width="1.6"/>
+            <text x="643" y="428" font-size="9" fill="#858691">Сумма и назначение</text>
+            <rect x="643" y="434" width="108" height="24" rx="6" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+            <line x1="650" y1="446" x2="678" y2="446" stroke="#D6D7DE" stroke-width="1.6"/>
+            <rect x="643" y="470" width="108" height="26" rx="7" fill="#9670E8"/>
+            <text x="697" y="487" text-anchor="middle" font-size="10.5" font-weight="600" fill="#fff">Перевести</text>
+            <g id="loader">
+              <circle cx="665" cy="520" r="8" fill="none" stroke="#E5E6EB" stroke-width="2.4"/>
+              <path d="M 665 512 a 8 8 0 0 1 8 8" fill="none" stroke="#9670E8" stroke-width="2.4" stroke-linecap="round"/>
+              <text x="682" y="524" font-size="10" fill="#858691">Обработка…</text>
+            </g>
+            <rect x="643" y="536" width="86" height="20" rx="10" fill="#FDEEEF"/>
+            <text x="686" y="550" text-anchor="middle" font-size="10" font-weight="600" fill="#ED777C">до 3 дней</text>
+          </g>
+        </g>
+      
+        <!-- КАРТОЧКА 3: Чек куратору -->
+        <g id="card-3" class="card fcard" style="--i:2">
+          <rect x="815" y="320" width="372" height="260" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5"/>
+          <rect x="833" y="338" width="56" height="20" rx="10" fill="#F4F5F7"/>
+          <text x="861" y="352" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ШАГ 3</text>
+          <text x="833" y="392" font-size="16" font-weight="600" fill="#30313B">Чек — куратору<tspan x="833" dy="22" font-size="12.5" font-weight="400" fill="#858691">Подтверждение проходит</tspan><tspan x="833" dy="17" font-size="12.5" font-weight="400" fill="#858691">через ручную сверку.</tspan></text>
+          <g id="btn-3">
+            <rect x="833" y="500" width="140" height="32" rx="8" fill="#30313B"/>
+            <text x="903" y="520" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">Отправить чек</text>
+          </g>
+          <!-- правая иллюстрация: отправка чека -->
+          <g id="ui-3">
+            <rect x="1029" y="338" width="140" height="224" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+            <rect x="1029" y="338" width="140" height="26" rx="12" fill="#FFFFFF"/>
+            <line x1="1029" y1="364" x2="1169" y2="364" stroke="#E5E6EB" stroke-width="1.2"/>
+            <text x="1045" y="352" font-size="10" font-weight="600" fill="#858691">Чек об оплате</text>
+            <g transform="translate(1045,382)">
+              <path d="M 0 3 h 22 l 7 7 v 32 h -29 z" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.4"/>
+              <path d="M 22 3 v 7 h 7"/>
+              <line x1="6" y1="15" x2="22" y2="15" stroke="#D6D7DE" stroke-width="1.8"/>
+              <line x1="6" y1="21" x2="17" y2="21" stroke="#D6D7DE" stroke-width="1.8"/>
+              <path d="M 7 30 l 5 5 l 9 -10" stroke="#55C99A" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <path d="M 1082 430 q 0 18 20 18 h 18" fill="none" stroke="#D6D7DE" stroke-width="1.6" stroke-dasharray="2 5"/>
+            <circle cx="1029" cy="462" r="0" fill="none"/>
+            <rect x="1045" y="452" width="86" height="28" rx="9" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2" filter="url(#liftSoft)"/>
+            <circle cx="1059" cy="466" r="6" fill="#E5E6EB"/>
+            <line x1="1070" y1="462" x2="1220" y2="462" stroke="none"/>
+            <line x1="1070" y1="461" x2="1120" y2="461" stroke="#D6D7DE" stroke-width="1.6"/>
+            <line x1="1070" y1="470" x2="1106" y2="470" stroke="#D6D7DE" stroke-width="1.6"/>
+            <g id="sendBtn">
+              <rect x="1045" y="496" width="108" height="28" rx="7" fill="#9670E8"/>
+              <text x="1099" y="514" text-anchor="middle" font-size="10.5" font-weight="600" fill="#fff">Отправить чек</text>
+            </g>
+            <g id="sentOk">
+              <circle cx="1180" cy="510" r="13" fill="#55C99A"/>
+              <path d="M 1174 510 l 4 4 l 8 -9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <text x="1099" y="542" text-anchor="middle" font-size="9.5" fill="#B9BAC2">проверит куратор вручную</text>
+          </g>
+        </g>
+      
+        <!-- КАРТОЧКА 4: Уточнение статуса -->
+        <g id="card-4" class="card fcard" style="--i:3">
+          <rect x="1217" y="320" width="372" height="260" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5"/>
+          <rect x="1235" y="338" width="56" height="20" rx="10" fill="#F4F5F7"/>
+          <text x="1263" y="352" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ШАГ 4</text>
+          <text x="1235" y="392" font-size="16" font-weight="600" fill="#30313B">Статус неизвестен<tspan x="1235" dy="22" font-size="12.5" font-weight="400" fill="#858691">В системе нет подтверждения —</tspan><tspan x="1235" dy="17" font-size="12.5" font-weight="400" fill="#858691">студент снова пишет куратору.</tspan></text>
+          <g id="btn-4">
+            <rect x="1235" y="500" width="156" height="32" rx="8" fill="#30313B"/>
+            <text x="1313" y="520" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">Написать куратору</text>
+          </g>
+          <!-- правая иллюстрация: статус-лист -->
+          <g id="ui-4">
+            <rect x="1431" y="338" width="140" height="224" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+            <rect x="1431" y="338" width="140" height="26" rx="12" fill="#FFFFFF"/>
+            <line x1="1431" y1="364" x2="1571" y2="364" stroke="#E5E6EB" stroke-width="1.2"/>
+            <text x="1447" y="352" font-size="10" font-weight="600" fill="#858691">Статус платежа</text>
+            <g font-size="10" fill="#858691">
+              <circle cx="1452" cy="386" r="4" fill="#55C99A"/>
+              <text x="1464" y="390">Чек отправлен</text>
+              <circle cx="1452" cy="412" r="4" fill="#F5BD58"/>
+              <text x="1464" y="416">Перевод идёт</text>
+              <circle cx="1452" cy="438" r="4" fill="#ED777C"/>
+              <text x="1464" y="442">Учтён ли платёж?</text>
+            </g>
+            <line x1="1447" y1="458" x2="1555" y2="458" stroke="#E5E6EB" stroke-width="1.2" stroke-dasharray="3 5"/>
+            <rect x="1447" y="470" width="108" height="34" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2" filter="url(#liftSoft)"/>
+            <text x="1501" y="491" text-anchor="middle" font-size="9.5" fill="#858691">уточнить в чате</text>
+            <g id="cursor">
+              <path d="M 1512 512 l 0 14 l 4 -4 l 3 6 l 4 -2 l -3 -6 l 5 0 z" fill="#FFFFFF" stroke="#30313B" stroke-width="1.6" stroke-linejoin="round"/>
+            </g>
+            <rect x="1447" y="530" width="86" height="20" rx="10" fill="#FDEEEF"/>
+            <text x="1490" y="544" text-anchor="middle" font-size="10" font-weight="600" fill="#ED777C">ответа нет</text>
+          </g>
+        </g>
+      </svg>
+      
+    </div>
+      <p class="cell-text primary">Основные инсайты:</p>
+      <ul class="list"><li><p>История платежей была разбросана по перепискам. Квитанции и чеки хранились в чатах с кураторами. Единой истории, где студент мог бы посмотреть свои финансовые операции, не было.</p></li><li><p>Студент не понимал, что происходит с его платежом. После отправки чека оставалось ждать ответа куратора. Было непонятно, учтён ли платёж и нужно ли предпринимать дополнительные действия.</p></li><li><p>Информация о задолженности была недоступна самостоятельно. Чтобы узнать, есть ли долг и сколько осталось оплатить, студенту приходилось обращаться к куратору или в деканат.</p></li></ul>
+      <p class="cell-text primary">Эти наблюдения показали, что студентам нужен не просто способ оплаты, а полноценный финансовый сервис с историей операций, балансом и понятными статусами.</p>
+    </section>
+    <section class="cell s12" id="issledovanie-2-konku">
+      <span class="cell-kicker">Исследование 2. конкурентный анализ</span>
+      <img class="zoomable" src="assets/case-oplata-benchmark.png" alt="Бенчмарк: паттерны оплаты в сервисах" style="cursor:zoom-in;width:100%;height:auto;display:block;border-radius:16px">
+      <p class="cell-text primary">Дополнительно я изучила платёжные сценарии банковских приложений, Ozon, Яндекса и образовательных платформ. Мне было важно посмотреть, как другие сервисы решают задачи управления деньгами, оплаты и контроля операций.</p>
+      <p class="cell-text primary">В качестве ориентиров выделила несколько паттернов:</p>
+      <ul class="list"><li><p>Предзаполненные суммы с возможностью указать свою</p></li><li><p>Несколько способов оплаты: банковская карта, QR-код, квитанция</p></li><li><p>Прозрачные статусы платежей</p></li><li><p>История операций и подтверждающие документы</p></li></ul>
+      <p class="cell-text primary">Эти паттерны стали основой для дальнейшего проектирования.</p>
+    </section>
+    <section class="cell s12" id="celi">
+      <span class="cell-kicker">Цели</span>
+      <div class="nums" style="grid-template-columns:repeat(3,1fr)">
+        <div class="num"><div class="v">&gt;70%</div><div class="k">платежей за обучение проходит через сервис</div></div>
+        <div class="num"><div class="v">−40%</div><div class="k">обращений в поддержку по вопросам оплаты</div></div>
+        <div class="num"><div class="v">&lt;10 мин</div><div class="k">медианное время оплаты</div></div>
+      </div>
+    </section>
+    <section class="cell s12" id="gipotezy">
+      <span class="cell-kicker">Гипотезы</span>
+      <p class="cell-text primary">На основе исследования я сформировала четыре продуктовые гипотезы.</p>
+      <div class="flow-anim hyp-anim" style="margin-top:12px">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1640" font-family="-apple-system, 'Onest', Arial, sans-serif">
+  <defs>
+    <filter id="lift" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="12" flood-color="#30313B" flood-opacity="0.08"/>
+    </filter>
+    <filter id="liftSoft" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#30313B" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- ГИПОТЕЗА 1: Самостоятельная онлайн-оплата -->
+  <g id="hyp-1" class="card" transform="translate(-22,-20) scale(2.0)">
+    <rect x="11" y="10" width="372" height="407" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5"/>
+    <rect x="29" y="28" width="86" height="20" rx="10" fill="#F4F5F7"/>
+    <text x="72" y="42" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ГИПОТЕЗА 1</text>
+    <text x="29" y="82" font-size="16" font-weight="600" fill="#30313B">Самостоятельная онлайн-оплата</text>
+    <text x="29" y="104" font-size="14" fill="#858691">Оплата внутри кабинета: сумма подставляется<tspan x="29" dy="17">автоматически, способ — на выбор студента.</tspan></text>
+                <!-- иллюстрация: панель оплаты -->
+    <g class="ui" transform="translate(0,-107)">
+      <rect x="29" y="248" width="336" height="258" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="45" y="269" width="110" height="9" rx="4.5" fill="#DADBE1"/>
+      <rect x="45" y="290" width="304" height="44" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="61" y="308" width="74" height="12" rx="6.0" fill="#D6D7DE"/>
+        <line x1="45" y1="352" x2="349" y2="352" stroke="#E5E6EB" stroke-width="1.2"/>
+      <g>
+        <rect x="45" y="376" width="92" height="56" rx="8" fill="#FFFFFF" stroke="#9670E8" stroke-width="1.6"/>
+        <circle cx="59" cy="390" r="5" fill="#9670E8"/>
+        <rect x="70" y="386" width="52" height="8" rx="2" fill="#E5E6EB"/>
+        <rect x="70" y="400" width="36" height="8" rx="2" fill="#E5E6EB"/>
+      </g>
+      <g>
+        <rect x="151" y="376" width="92" height="56" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+        <rect x="178" y="386" width="38" height="38" rx="4" fill="none" stroke="#C9C9D2" stroke-width="1.6"/>
+        <rect x="184" y="392" width="26" height="26" rx="2" fill="none" stroke="#C9C9D2" stroke-width="1.4"/>
+        <rect x="192" y="400" width="10" height="10" fill="#30313B"/>
+      </g>
+      <g>
+        <rect x="257" y="376" width="92" height="56" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+        <path d="M 292 386 h 16 l 5 5 v 22 h -21 z" fill="none" stroke="#C9C9D2" stroke-width="1.6"/>
+        <line x1="296" y1="396" x2="306" y2="396" stroke="#C9C9D2" stroke-width="1.6"/>
+        <line x1="296" y1="402" x2="303" y2="402" stroke="#C9C9D2" stroke-width="1.6"/>
+      </g>
+      <rect x="45" y="462" width="304" height="30" rx="7" fill="#9670E8"/>
+      <text x="197" y="481" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Перейти к оплате</text>
+    </g>
+  </g>
+
+  <!-- ГИПОТЕЗА 2: Снижение ошибок -->
+  <g id="hyp-2" class="card" transform="translate(-70,-20) scale(2.0)">
+    <rect x="413" y="10" width="372" height="407" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5"/>
+    <rect x="431" y="28" width="86" height="20" rx="10" fill="#F4F5F7"/>
+    <text x="474" y="42" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ГИПОТЕЗА 2</text>
+    <text x="431" y="82" font-size="16" font-weight="600" fill="#30313B">Снижение количества ошибок</text>
+    <text x="431" y="104" font-size="14" fill="#858691">Без ручного ввода реквизитов и назначения платежа:<tspan x="431" dy="17">меньше ошибок и потерянных чеков.</tspan></text>
+                <!-- иллюстрация: автозаполнение -->
+    <g class="ui" transform="translate(0,-107)">
+      <rect x="431" y="248" width="336" height="258" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="447" y="269" width="120" height="9" rx="4.5" fill="#DADBE1"/>
+      <g>
+        <rect x="447" y="290" width="304" height="34" rx="7" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+        <rect x="461" y="304" width="86" height="8" rx="4.0" fill="#E3E4E9"/>
+        <rect x="541" y="304" width="108" height="8" rx="4.0" fill="#D6D7DE"/>
+        <circle cx="709" cy="307" r="6" fill="#55C99A"/>
+        <path d="M 706 307 l 2 2 l 4 -4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g>
+        <rect x="447" y="332" width="304" height="34" rx="7" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+        <rect x="461" y="346" width="64" height="8" rx="4.0" fill="#E3E4E9"/>
+        <rect x="513" y="346" width="150" height="8" rx="4.0" fill="#D6D7DE"/>
+        <circle cx="709" cy="349" r="6" fill="#55C99A"/>
+        <path d="M 706 349 l 2 2 l 4 -4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g>
+        <rect x="447" y="374" width="304" height="34" rx="7" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+        <rect x="461" y="388" width="44" height="8" rx="4.0" fill="#E3E4E9"/>
+        <rect x="497" y="388" width="76" height="8" rx="4.0" fill="#D6D7DE"/>
+        <circle cx="709" cy="391" r="6" fill="#55C99A"/>
+        <path d="M 706 391 l 2 2 l 4 -4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <rect x="447" y="425" width="168" height="8" rx="4.0" fill="#E3E4E9"/>
+      <rect x="447" y="448" width="304" height="2" fill="#F0F0F3"/>
+          </g>
+  </g>
+
+  <!-- ГИПОТЕЗА 3: Прозрачность платежей -->
+  <g id="hyp-3" class="card" transform="translate(-1630,806) scale(2.0)">
+    <rect x="815" y="10" width="372" height="407" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5"/>
+    <rect x="833" y="28" width="86" height="20" rx="10" fill="#F4F5F7"/>
+    <text x="876" y="42" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ГИПОТЕЗА 3</text>
+    <text x="833" y="82" font-size="16" font-weight="600" fill="#30313B">Прозрачность платежей</text>
+    <text x="833" y="104" font-size="14" fill="#858691">Статус и остаток долга всегда на виду,<tspan x="833" dy="17">уведомления и напоминания приходят сами.</tspan></text>
+                <!-- иллюстрация: статусы и уведомления -->
+    <g class="ui" transform="translate(0,-107)">
+      <rect x="833" y="248" width="336" height="258" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="849" y="269" width="100" height="9" rx="4.5" fill="#DADBE1"/>
+      <g transform="translate(1125,262)">
+        <path d="M 10 4 a 6 6 0 0 1 6 6 v 8 l 2 4 h -16 l 2 -4 v -8 a 6 6 0 0 1 6 -6 z M 8 26 a 2.5 2.5 0 0 0 4 0" fill="none" stroke="#858691" stroke-width="1.8" stroke-linejoin="round"/>
+        <circle cx="20" cy="4" r="7" fill="#9670E8"/>
+        <text x="20" y="7.5" text-anchor="middle" font-size="8.5" font-weight="600" fill="#fff">1</text>
+      </g>
+      <line x1="861" y1="300" x2="861" y2="388" stroke="#E5E6EB" stroke-width="2"/>
+      <g>
+        <circle cx="861" cy="302" r="8" fill="#55C99A"/>
+        <path d="M 857.5 302 l 2.5 2.5 l 5 -5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="881" y="299" width="92" height="8" rx="4.0" fill="#DADBE1"/>
+      </g>
+      <g>
+        <circle cx="861" cy="344" r="8" fill="#55C99A"/>
+        <path d="M 857.5 344 l 2.5 2.5 l 5 -5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="881" y="341" width="96" height="8" rx="4.0" fill="#DADBE1"/>
+      </g>
+      <g>
+        <circle cx="861" cy="386" r="8" fill="#F5BD58"/>
+        <circle cx="861" cy="386" r="3.5" fill="#fff"/>
+        <rect x="881" y="383" width="124" height="8" rx="4.0" fill="#C9C9D2"/>
+      </g>
+      <rect x="849" y="412" width="304" height="44" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="865" y="423" width="116" height="8" rx="4.0" fill="#E3E4E9"/>
+      <rect x="865" y="441" width="130" height="10" rx="5.0" fill="#D6D7DE"/>
+      
+    </g>
+  </g>
+
+  <!-- ГИПОТЕЗА 4: Кошелёк -->
+  <g id="hyp-4" class="card" transform="translate(-1678,806) scale(2.0)">
+    <rect x="1217" y="10" width="372" height="407" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5"/>
+    <rect x="1235" y="28" width="86" height="20" rx="10" fill="#F4F5F7"/>
+    <text x="1278" y="42" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ГИПОТЕЗА 4</text>
+    <text x="1235" y="82" font-size="16" font-weight="600" fill="#30313B">Кошелёк для управления средствами</text>
+    <text x="1235" y="104" font-size="14" fill="#858691">Пополняй лицевой счёт заранее и плати с баланса —<tspan x="1235" dy="17">без нового перевода каждый раз.</tspan></text>
+                <!-- иллюстрация: баланс и операции -->
+    <g class="ui" transform="translate(0,-107)">
+      <rect x="1235" y="248" width="336" height="258" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="1251" y="264" width="304" height="88" rx="12" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2" filter="url(#liftSoft)"/>
+      <rect x="1269" y="283" width="84" height="8" rx="4.0" fill="#E3E4E9"/>
+      <rect x="1269" y="306" width="92" height="14" rx="7.0" fill="#D6D7DE"/>
+      <rect x="1463" y="296" width="76" height="26" rx="7" fill="#9670E8"/>
+      <text x="1501" y="313" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Пополнить</text>
+      <rect x="1251" y="373" width="64" height="9" rx="4.5" fill="#DADBE1"/>
+      <g>
+        <rect x="1251" y="392" width="304" height="40" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1"/>
+        <circle cx="1273" cy="412" r="10" fill="#E9F8F1"/>
+        <path d="M 1269 412 v -4 M 1273 410 v 6 M 1277 412 v -4" stroke="#55C99A" stroke-width="1.8" stroke-linecap="round"/>
+        <rect x="1293" y="401" width="78" height="8" rx="4.0" fill="#DADBE1"/>
+        <rect x="1293" y="416" width="36" height="7" rx="3.5" fill="#E3E4E9"/>
+        <rect x="1467" y="409" width="72" height="9" rx="4.5" fill="#CBEEDA"/>
+      </g>
+      <g>
+        <rect x="1251" y="440" width="304" height="40" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1"/>
+        <circle cx="1273" cy="460" r="10" fill="#F3EFFE"/>
+        <rect x="1268" y="455" width="10" height="10" rx="2" fill="#9670E8"/>
+        <rect x="1293" y="449" width="104" height="8" rx="4.0" fill="#DADBE1"/>
+        <rect x="1293" y="464" width="44" height="7" rx="3.5" fill="#E3E4E9"/>
+        <rect x="1467" y="457" width="72" height="9" rx="4.5" fill="#D6D7DE"/>
+      </g>
+          </g>
+  </g>
+</svg>
+
+
+
+
+      
+    </div>
+      <ul class="list"></ul>
+    </section>
+    <section class="cell s12" id="ogranicheniya-platez">
+      <span class="cell-kicker">Ограничения платёжных сценариев</span>
+      <p class="cell-text primary">Способ подтверждения платежа зависит от выбранного способа оплаты.</p>
+      <p class="cell-text primary">Банковская карта. Результат онлайн-оплаты передаётся платёжным виджетом в сервис, поэтому статус обновляется автоматически.</p>
+      <p class="cell-text primary">QR-код и квитанция. Оплата происходит вне личного кабинета, поэтому студенту необходимо самостоятельно прикрепить подтверждающий документ в разделе оплаты. После этого менеджер проверяет документ и подтверждает статус платежа.</p>
+    </section>
+    <section class="cell s12" id="yuzabiliti-testirova">
+      <span class="cell-kicker">Юзабилити-тестирование</span>
+      <p class="cell-text primary">Перед релизом я проверила основные сценарии на тестовой среде.</p>
+      <p class="cell-text primary">Участники: 5 студентов (3 студента высшего образования, 1 студент колледжа и 1 магистрант) и 1 куратор. Студенты проходили сценарии онлайн-оплаты и просмотра финансовой информации. Куратор проверял сценарии подтверждения квитанций.</p>
+      <p class="cell-text primary">Тестовые задания:</p>
+      <ul class="list"><li><p>Оплатить счёт за обучение онлайн.</p></li><li><p>Найти в истории, за что и когда были списаны деньги.</p></li><li><p>Для куратора: подтвердить квитанцию студента и отклонить неактуальный счёт.</p></li></ul>
+      <p class="cell-text primary">Что я проверяла: время выполнения сценария, успешность выполнения с первой попытки, понимание платёжного процесса. После каждого задания просила участника своими словами объяснить, что происходит с его деньгами и какой следующий шаг ему предстоит сделать.</p>
+    </section>
+    <section class="cell s12" id="chto-obnaruzhila-po-">
+      <span class="cell-kicker">Что обнаружила по итогам юзабилити-теста</span>
+      <p class="cell-text primary">Студенты путались в терминологии блока баланса и не понимали, как трактовать отдельные суммы. Особенно заметной проблема становилась, когда счёт выставлялся сразу на несколько семестров:</p>
+      <ul class="list"><li><p>«К оплате» воспринимали как сумму, которую ещё осталось заплатить, хотя на самом деле это была общая сумма начислений</p></li><li><p>«Оплачено» не всегда считывали как сумму фактически переведённых денег</p></li><li><p>«Переплата» не воспринимали как остаток средств на кошельке и не понимали, что с ним можно сделать</p></li></ul>
+      <p class="cell-text primary">Сроки релиза были сжатыми, поэтому мы не успевали внести более существенные изменения в структуру и терминологию блока. При этом я добавила пояснения непосредственно в блок переплаты, чтобы студент понимал, как распорядиться остатком:</p>
+      <ul class="list"><li><p>Вернуть деньги через обращение в финансовый отдел</p></li><li><p>Сумма переплаты автоматически вычтется из нового начисления</p></li><li><p>Посмотреть историю операций с переплатой, чтобы отслеживать, как меняется остаток и куда направляются средства</p></li></ul>
+      <p class="cell-text primary">Остальные изменения терминологии и структуры баланса перенесли во вторую итерацию.</p>
+      <img class="zoomable" src="assets/case-oplata-overpay.png" alt="Просмотр переплаты — экран сервиса" style="cursor:zoom-in;width:100%;height:auto;display:block;border-radius:16px;margin-top:4px">
+    </section>
+    <section class="cell s12" id="reshenie">
+      <span class="cell-kicker">Решение</span>
+      <p class="cell-text primary">На основе исследований и гипотез я спроектировала сервис «Мои финансы», который объединил основные финансовые сценарии студента в личном кабинете.</p>
+      <ul class="list"><li><p>Статистика техподдержки: количество обращений по теме оплаты до и после запуска</p></li><li><p>События в личном кабинете: время от открытия счёта до получения статуса «Оплачено»</p></li></ul>
+    </section>
+    <img class="zoomable" src="assets/case-oplata-screen-1.png" alt="Экран сервиса оплаты" style="cursor:zoom-in;grid-column:span 12;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+    <img class="zoomable" src="assets/case-oplata-screen-2.png" alt="Страница оплаты" style="cursor:zoom-in;grid-column:span 12;width:100%;height:auto;display:block;border-radius:24px">
+    <section class="cell s12">
+      <p class="cell-text primary">Единое пространство для управления финансами. Вместо разрозненной информации в переписках студент получил личный финансовый раздел. В нём собраны: баланс, суммы к оплате, информация о задолженности и переплате, история платежей и списаний по счёту, возможность пополнения кошелька. Лицевой счёт работает как кошелёк: студент может заранее пополнять его, хранить средства и использовать их для оплаты обучения.</p>
+    </section>
+    <img class="zoomable" src="assets/case-oplata-screen-3.png" alt="Выбор способа оплаты" style="cursor:zoom-in;grid-column:span 12;width:100%;height:auto;display:block;border-radius:24px">
+    <section class="cell s12">
+      <p class="cell-text primary">Онлайн-оплата. Оплата спроектирована непосредственно внутри личного кабинета. Чтобы сократить количество действий и снизить вероятность ошибок: предложенные суммы с возможностью ввести свою, без необходимости самостоятельно вводить банковские реквизиты и назначение платежа, три способа оплаты — банковская карта через платёжный виджет, QR-код для мобильного банка и квитанция для оплаты офлайн.</p>
+    </section>
+    <img class="zoomable" src="assets/case-oplata-notification.png" alt="Главная — уведомление об оплате" style="cursor:zoom-in;grid-column:span 12;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+    <section class="cell s12">
+      <p class="cell-text primary">Уведомления об изменении статусов. Уведомления о ключевых изменения: выставлен новый счёт, оплата подтверждена, счёт стал неактуальным. Каждое уведомление ведёт к соответствующей странице в личном кабинете. Это помогает студенту не пропускать важные изменения и не уточнять статус платежа у куратора.</p>
+    </section>
+    <img class="zoomable" src="assets/case-oplata-receipt-confirmed.png" alt="Квитанции — подтверждено" style="cursor:zoom-in;grid-column:span 12;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+    <section class="cell s12">
+      <p class="cell-text primary">Благодаря статусам студент может сам проверить, на каком этапе находится оплата, и не обращаться за уточнениями к куратору.</p>
+    </section>
+    <div class="carousel" style="grid-column:span 12;position:relative;border-radius:24px;overflow:hidden">
+      <div class="carousel-track" style="display:flex;transition:transform .4s ease">
+        <img src="assets/case-oplata-screen-6.png" alt="Добавить квитанцию" style="width:100%;flex:0 0 100%;display:block">
+        <img src="assets/case-oplata-screen-7.png" alt="Таблица заявок на подтверждение" style="width:100%;flex:0 0 100%;display:block">
+      </div>
+      <button onclick="carGo(this,-1)" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8249;</button>
+      <button onclick="carGo(this,1)" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8250;</button>
+      <div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:6px">
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:.9"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:.45"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:.45"></span>
+      </div>
+    </div>
+    <section class="cell s12">
+      <p class="cell-text primary"><b>Спроектировала интерфейс куратора для работы с платежами.</b> В нём куратор может просматривать информацию о студенте, проверять выставленные счета и историю платежей, сверять поступившие оплаты и подтверждать их. Это позволило перенести проверку платежей из разрозненной коммуникации в единую систему и сделать процесс прозрачнее для сотрудников.</p>
+    </section>
+    <section class="cell s12" id="rezultaty">
+      <span class="cell-kicker">Результаты</span>
+      <p class="cell-text primary">После запуска я сопоставила целевые показатели с фактическими данными.</p>
+      <p class="cell-text primary">Источники данных:</p>
+      <ul class="list">
+        <li><p>Продуктовая аналитика: доля платежей через сервис от общего количества платежей за обучение</p></li>
+        <li><p>Статистика техподдержки: количество обращений по теме оплаты до и после запуска</p></li>
+        <li><p>События в личном кабинете: время от открытия счёта до получения статуса «Оплачено»</p></li>
+      </ul>
+      <div class="nums" style="grid-template-columns:repeat(3,1fr)">
+        <div class="num"><div class="v">83%</div><div class="k">доля платежей через сервис</div></div>
+        <div class="num"><div class="v">−47%</div><div class="k">ручной обработки</div></div>
+        <div class="num"><div class="v">4,5 мин</div><div class="k">медианное время оплаты</div></div>
+      </div>
+    </section>
+    <section class="cell s12" id="itog-ke-sa">
+      <span class="cell-kicker">Итог кейса</span>
+      <p class="cell-text primary">Платёжный процесс переехал из переписки с кураторами в личный кабинет. Теперь студент может самостоятельно посмотреть счёт, оплатить обучение удобным способом, проверить статус платежа и историю операций в одном месте.</p>
+      <p class="cell-text primary">Доля платежей через сервис достигла 83%, количество обращений по вопросам оплаты в техподдержку снизилось на 47%, а медианное время оплаты составило 4,5 минуты.</p>
+      <p class="cell-text primary">Кураторам и финансовым консультантам больше не приходится вручную отвечать на типовые вопросы о суммах, статусах и подтверждении платежей. Студенты получили самостоятельный доступ к финансовой информации, а сотрудники смогли сократить время на рутинные операции.</p>
+      <p class="cell-text primary">Кошелёк стал частью финансового сервиса. Студенты получили возможность пополнять лицевой счёт заранее, хранить средства и использовать их для оплаты обучения. История операций позволяет отслеживать движение денег, включая пополнения и списания.</p>
+    </section>
+    </div>
+      <section class="cell s12">
+      <div class="slider-head">
+        <span class="cell-kicker">Другие кейсы</span>
+        <div class="slider-nav">
+          <button type="button" data-dir="-1" aria-label="Назад">‹</button>
+          <button type="button" data-dir="1" aria-label="Вперёд">›</button>
+        </div>
+      </div>
+      <div class="slider" id="casesSlider">
+        <a class="slider-card" href="case-konstruktor.html">
+          <div class="sl-cover"><img src="assets/case-cover-generic.jpg" alt="Конструктор курсов в LMS"></div>
+          <div class="sl-body">
+            <div class="proj-meta" style="position:static;opacity:1"><span class="tag">EdTech</span><span class="tag">B2B</span></div>
+            <h3 class="cell-title">Конструктор курсов в LMS</h3>
+            <p class="proj-desc">1875 курсов создано, 31 подразделение, 73,3% доходят до публикации.</p>
+          </div>
+        </a>
+        <a class="slider-card" href="case-raspisanie.html">
+          <div class="sl-cover"><img src="assets/case-raspisanie-week.png" alt="Расписание университета"></div>
+          <div class="sl-body">
+            <div class="proj-meta" style="position:static;opacity:1"><span class="tag">EdTech</span><span class="tag">B2C</span></div>
+            <h3 class="cell-title">Расписание университета</h3>
+            <p class="proj-desc">100 тыс+ пользователей, −70% обращений, 12 000 переходов в онлайн-занятия.</p>
+          </div>
+        </a>
+        <a class="slider-card" href="case-obuchenie.html">
+          <div class="sl-cover"><img src="assets/case-cover-generic.jpg" alt="Обучение в LMS"></div>
+          <div class="sl-body">
+            <div class="proj-meta" style="position:static;opacity:1"><span class="tag">EdTech</span></div>
+            <h3 class="cell-title">Обучение в LMS</h3>
+            <p class="proj-desc">4 итерации от MVP ДПО до университетского цикла с семестрами и пересдачами.</p>
+          </div>
+        </a>
+        <a class="slider-card" href="case-ai-spend.html">
+          <div class="sl-cover"><img src="assets/case-ai-spend-cover.jpg" alt="AI-платформа для управления расходами"></div>
+          <div class="sl-body">
+            <div class="proj-meta" style="position:static;opacity:1"><span class="tag">B2B</span><span class="tag">Fintech</span></div>
+            <h3 class="cell-title">AI-платформа для управления расходами</h3>
+            <p class="proj-desc">Дизайн-система с нуля и экраны для сервиса с ИИ-распознаванием чеков.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+</div>
+<script src="app.js?v8"></script>
+<script>
+  (function () {
+    var el = document.querySelector('.flow-anim');
+    if (!el) return;
+    if (!('IntersectionObserver' in window)) { el.classList.add('play'); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { el.classList.add('play'); io.disconnect(); } });
+    }, { threshold: 0.25 });
+    io.observe(el);
+  })();
+  </script>
+<script>
+function carGo(btn, dir) {
+  var root = btn.closest(".carousel");
+  var track = root.querySelector(".carousel-track");
+  var slides = track.children.length;
+  var idx = parseInt(root.dataset.idx || "0");
+  idx = Math.min(Math.max(idx + dir, 0), slides - 1);
+  root.dataset.idx = idx;
+  track.style.transform = "translateX(-" + idx * 100 + "%)";
+  root.querySelectorAll(".car-dot").forEach(function (d, i) { d.style.opacity = i === idx ? ".9" : ".45"; });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="folderBack" gradientUnits="userSpaceOnUse" x1="22" y1="30" x2="98" y2="90">
+      <stop offset="0" stop-color="#F7B4E9"/>
+      <stop offset="1" stop-color="#F793E3"/>
+    </linearGradient>
+    <linearGradient id="folderDepth" gradientUnits="userSpaceOnUse" x1="22" y1="35" x2="98" y2="95">
+      <stop offset="0" stop-color="#F7B4E9"/>
+      <stop offset="1" stop-color="#E96BCB"/>
+    </linearGradient>
+    <linearGradient id="folderFront" gradientUnits="userSpaceOnUse" x1="30" y1="50" x2="92" y2="96">
+      <stop offset="0" stop-color="#F7B4E9"/>
+      <stop offset="0.5" stop-color="#F793E3"/>
+      <stop offset="1" stop-color="#E96BCB"/>
+    </linearGradient>
+    <linearGradient id="openingAO" gradientUnits="userSpaceOnUse" x1="0" y1="42" x2="0" y2="51">
+      <stop offset="0" stop-color="#E96BCB" stop-opacity="0"/>
+      <stop offset="1" stop-color="#E96BCB" stop-opacity="0.42"/>
+    </linearGradient>
+    <linearGradient id="arrowFace" gradientUnits="userSpaceOnUse" x1="48" y1="55" x2="72" y2="86">
+      <stop offset="0" stop-color="#86D9A0"/>
+      <stop offset="0.5" stop-color="#22A052"/>
+      <stop offset="1" stop-color="#15803D"/>
+    </linearGradient>
+    <radialGradient id="shadowPink" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#E96BCB" stop-opacity="0.24"/>
+      <stop offset="0.7" stop-color="#E96BCB" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#E96BCB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="specPink" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF0FC" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFF0FC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="60" cy="99" rx="34" ry="7" fill="url(#shadowPink)"/>
+  <g transform="translate(0,5)">
+    <rect x="22" y="30" width="34" height="16" rx="8" fill="url(#folderDepth)"/>
+    <rect x="22" y="38" width="76" height="52" rx="12" fill="url(#folderDepth)"/>
+  </g>
+  <rect x="22" y="30" width="34" height="16" rx="8" fill="url(#folderBack)"/>
+  <rect x="22" y="38" width="76" height="52" rx="12" fill="url(#folderBack)"/>
+  <rect x="60" y="21" width="28" height="26" rx="6" fill="#FFF0FC" opacity="0.8" transform="rotate(-8 74 34)"/>
+  <rect x="36" y="23" width="36" height="26" rx="7" fill="#FFF0FC" opacity="0.97"/>
+  <rect x="26" y="42" width="68" height="9" fill="url(#openingAO)"/>
+  <rect x="26" y="50" width="68" height="44" rx="14" fill="url(#folderFront)"/>
+  <rect x="30" y="52" width="60" height="8" rx="4" fill="#FFF0FC" opacity="0.26"/>
+  <g transform="translate(0,3.5)" fill="#11632F">
+    <path d="M60 55 L71.5 70.5 L48.5 70.5 Z" stroke="#11632F" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="55.5" y="69" width="9" height="17" rx="4.5"/>
+  </g>
+  <path d="M60 55 L71.5 70.5 L48.5 70.5 Z" fill="url(#arrowFace)" stroke="url(#arrowFace)" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="55.5" y="69" width="9" height="17" rx="4.5" fill="url(#arrowFace)"/>
+  <ellipse cx="31" cy="34" rx="5" ry="2.8" transform="rotate(-12 31 34)" fill="url(#specPink)"/>
+  <ellipse cx="35" cy="57.5" rx="6" ry="3" transform="rotate(-8 35 57.5)" fill="url(#specPink)" opacity="0.7"/>
+</svg>

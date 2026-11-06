@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 437" font-family="-apple-system, 'Onest', Arial, sans-serif">
+  <defs>
+    <filter id="lift" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="12" flood-color="#30313B" flood-opacity="0.08"/>
+    </filter>
+    <filter id="liftSoft" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#30313B" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- ГИПОТЕЗА 1: Самостоятельная онлайн-оплата -->
+  <g id="hyp-1" class="card">
+    <rect x="11" y="10" width="372" height="407" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5" filter="url(#lift)"/>
+    <rect x="29" y="28" width="86" height="20" rx="10" fill="#F4F5F7"/>
+    <text x="72" y="42" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ГИПОТЕЗА 1</text>
+    <text x="29" y="82" font-size="16" font-weight="600" fill="#30313B">Самостоятельная онлайн-оплата</text>
+    <text x="29" y="104" font-size="14" fill="#858691">Оплата внутри кабинета: сумма подставляется<tspan x="29" dy="17">автоматически, способ — на выбор студента.</tspan></text>
+                <!-- иллюстрация: панель оплаты -->
+    <g class="ui" transform="translate(0,-107)">
+      <rect x="29" y="248" width="336" height="258" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="45" y="269" width="110" height="9" rx="4.5" fill="#DADBE1"/>
+      <rect x="45" y="290" width="304" height="44" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="61" y="308" width="74" height="12" rx="6.0" fill="#D6D7DE"/>
+        <line x1="45" y1="352" x2="349" y2="352" stroke="#E5E6EB" stroke-width="1.2"/>
+      <g>
+        <rect x="45" y="376" width="92" height="56" rx="8" fill="#FFFFFF" stroke="#9670E8" stroke-width="1.6"/>
+        <circle cx="59" cy="390" r="5" fill="#9670E8"/>
+        <rect x="70" y="386" width="52" height="8" rx="2" fill="#E5E6EB"/>
+        <rect x="70" y="400" width="36" height="8" rx="2" fill="#E5E6EB"/>
+      </g>
+      <g>
+        <rect x="151" y="376" width="92" height="56" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+        <rect x="178" y="386" width="38" height="38" rx="4" fill="none" stroke="#C9C9D2" stroke-width="1.6"/>
+        <rect x="184" y="392" width="26" height="26" rx="2" fill="none" stroke="#C9C9D2" stroke-width="1.4"/>
+        <rect x="192" y="400" width="10" height="10" fill="#30313B"/>
+      </g>
+      <g>
+        <rect x="257" y="376" width="92" height="56" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+        <path d="M 292 386 h 16 l 5 5 v 22 h -21 z" fill="none" stroke="#C9C9D2" stroke-width="1.6"/>
+        <line x1="296" y1="396" x2="306" y2="396" stroke="#C9C9D2" stroke-width="1.6"/>
+        <line x1="296" y1="402" x2="303" y2="402" stroke="#C9C9D2" stroke-width="1.6"/>
+      </g>
+      <rect x="45" y="462" width="304" height="30" rx="7" fill="#9670E8"/>
+      <text x="197" y="481" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Перейти к оплате</text>
+    </g>
+  </g>
+
+  <!-- ГИПОТЕЗА 2: Снижение ошибок -->
+  <g id="hyp-2" class="card">
+    <rect x="413" y="10" width="372" height="407" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5" filter="url(#lift)"/>
+    <rect x="431" y="28" width="86" height="20" rx="10" fill="#F4F5F7"/>
+    <text x="474" y="42" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ГИПОТЕЗА 2</text>
+    <text x="431" y="82" font-size="16" font-weight="600" fill="#30313B">Снижение количества ошибок</text>
+    <text x="431" y="104" font-size="14" fill="#858691">Без ручного ввода реквизитов и назначения платежа:<tspan x="431" dy="17">меньше ошибок и потерянных чеков.</tspan></text>
+                <!-- иллюстрация: автозаполнение -->
+    <g class="ui" transform="translate(0,-107)">
+      <rect x="431" y="248" width="336" height="258" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="447" y="269" width="120" height="9" rx="4.5" fill="#DADBE1"/>
+      <g>
+        <rect x="447" y="290" width="304" height="34" rx="7" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+        <rect x="461" y="304" width="86" height="8" rx="4.0" fill="#E3E4E9"/>
+        <rect x="541" y="304" width="108" height="8" rx="4.0" fill="#D6D7DE"/>
+        <circle cx="709" cy="307" r="6" fill="#55C99A"/>
+        <path d="M 706 307 l 2 2 l 4 -4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g>
+        <rect x="447" y="332" width="304" height="34" rx="7" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+        <rect x="461" y="346" width="64" height="8" rx="4.0" fill="#E3E4E9"/>
+        <rect x="513" y="346" width="150" height="8" rx="4.0" fill="#D6D7DE"/>
+        <circle cx="709" cy="349" r="6" fill="#55C99A"/>
+        <path d="M 706 349 l 2 2 l 4 -4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <g>
+        <rect x="447" y="374" width="304" height="34" rx="7" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+        <rect x="461" y="388" width="44" height="8" rx="4.0" fill="#E3E4E9"/>
+        <rect x="497" y="388" width="76" height="8" rx="4.0" fill="#D6D7DE"/>
+        <circle cx="709" cy="391" r="6" fill="#55C99A"/>
+        <path d="M 706 391 l 2 2 l 4 -4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <rect x="447" y="425" width="168" height="8" rx="4.0" fill="#E3E4E9"/>
+      <rect x="447" y="448" width="304" height="2" fill="#F0F0F3"/>
+          </g>
+  </g>
+
+  <!-- ГИПОТЕЗА 3: Прозрачность платежей -->
+  <g id="hyp-3" class="card">
+    <rect x="815" y="10" width="372" height="407" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5" filter="url(#lift)"/>
+    <rect x="833" y="28" width="86" height="20" rx="10" fill="#F4F5F7"/>
+    <text x="876" y="42" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ГИПОТЕЗА 3</text>
+    <text x="833" y="82" font-size="16" font-weight="600" fill="#30313B">Прозрачность платежей</text>
+    <text x="833" y="104" font-size="14" fill="#858691">Статус и остаток долга всегда на виду,<tspan x="833" dy="17">уведомления и напоминания приходят сами.</tspan></text>
+                <!-- иллюстрация: статусы и уведомления -->
+    <g class="ui" transform="translate(0,-107)">
+      <rect x="833" y="248" width="336" height="258" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="849" y="269" width="100" height="9" rx="4.5" fill="#DADBE1"/>
+      <g transform="translate(1125,262)">
+        <path d="M 10 4 a 6 6 0 0 1 6 6 v 8 l 2 4 h -16 l 2 -4 v -8 a 6 6 0 0 1 6 -6 z M 8 26 a 2.5 2.5 0 0 0 4 0" fill="none" stroke="#858691" stroke-width="1.8" stroke-linejoin="round"/>
+        <circle cx="20" cy="4" r="7" fill="#9670E8"/>
+        <text x="20" y="7.5" text-anchor="middle" font-size="8.5" font-weight="600" fill="#fff">1</text>
+      </g>
+      <line x1="861" y1="300" x2="861" y2="388" stroke="#E5E6EB" stroke-width="2"/>
+      <g>
+        <circle cx="861" cy="302" r="8" fill="#55C99A"/>
+        <path d="M 857.5 302 l 2.5 2.5 l 5 -5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="881" y="299" width="92" height="8" rx="4.0" fill="#DADBE1"/>
+      </g>
+      <g>
+        <circle cx="861" cy="344" r="8" fill="#55C99A"/>
+        <path d="M 857.5 344 l 2.5 2.5 l 5 -5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="881" y="341" width="96" height="8" rx="4.0" fill="#DADBE1"/>
+      </g>
+      <g>
+        <circle cx="861" cy="386" r="8" fill="#F5BD58"/>
+        <circle cx="861" cy="386" r="3.5" fill="#fff"/>
+        <rect x="881" y="383" width="124" height="8" rx="4.0" fill="#C9C9D2"/>
+      </g>
+      <rect x="849" y="412" width="304" height="44" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="865" y="423" width="116" height="8" rx="4.0" fill="#E3E4E9"/>
+      <rect x="865" y="441" width="130" height="10" rx="5.0" fill="#D6D7DE"/>
+      
+    </g>
+  </g>
+
+  <!-- ГИПОТЕЗА 4: Кошелёк -->
+  <g id="hyp-4" class="card">
+    <rect x="1217" y="10" width="372" height="407" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5" filter="url(#lift)"/>
+    <rect x="1235" y="28" width="86" height="20" rx="10" fill="#F4F5F7"/>
+    <text x="1278" y="42" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ГИПОТЕЗА 4</text>
+    <text x="1235" y="82" font-size="16" font-weight="600" fill="#30313B">Кошелёк для управления средствами</text>
+    <text x="1235" y="104" font-size="14" fill="#858691">Пополняй лицевой счёт заранее и плати с баланса —<tspan x="1235" dy="17">без нового перевода каждый раз.</tspan></text>
+                <!-- иллюстрация: баланс и операции -->
+    <g class="ui" transform="translate(0,-107)">
+      <rect x="1235" y="248" width="336" height="258" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="1251" y="264" width="304" height="88" rx="12" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2" filter="url(#liftSoft)"/>
+      <rect x="1269" y="283" width="84" height="8" rx="4.0" fill="#E3E4E9"/>
+      <rect x="1269" y="306" width="92" height="14" rx="7.0" fill="#D6D7DE"/>
+      <rect x="1463" y="296" width="76" height="26" rx="7" fill="#9670E8"/>
+      <text x="1501" y="313" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">Пополнить</text>
+      <rect x="1251" y="373" width="64" height="9" rx="4.5" fill="#DADBE1"/>
+      <g>
+        <rect x="1251" y="392" width="304" height="40" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1"/>
+        <circle cx="1273" cy="412" r="10" fill="#E9F8F1"/>
+        <path d="M 1269 412 v -4 M 1273 410 v 6 M 1277 412 v -4" stroke="#55C99A" stroke-width="1.8" stroke-linecap="round"/>
+        <rect x="1293" y="401" width="78" height="8" rx="4.0" fill="#DADBE1"/>
+        <rect x="1293" y="416" width="36" height="7" rx="3.5" fill="#E3E4E9"/>
+        <rect x="1467" y="409" width="72" height="9" rx="4.5" fill="#CBEEDA"/>
+      </g>
+      <g>
+        <rect x="1251" y="440" width="304" height="40" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1"/>
+        <circle cx="1273" cy="460" r="10" fill="#F3EFFE"/>
+        <rect x="1268" y="455" width="10" height="10" rx="2" fill="#9670E8"/>
+        <rect x="1293" y="449" width="104" height="8" rx="4.0" fill="#DADBE1"/>
+        <rect x="1293" y="464" width="44" height="7" rx="3.5" fill="#E3E4E9"/>
+        <rect x="1467" y="457" width="72" height="9" rx="4.5" fill="#D6D7DE"/>
+      </g>
+          </g>
+  </g>
+</svg>

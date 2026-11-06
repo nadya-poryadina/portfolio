@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="-apple-system, 'Onest', Arial, sans-serif">
+  <defs>
+    <filter id="lift" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="12" flood-color="#30313B" flood-opacity="0.08"/>
+    </filter>
+    <filter id="liftSoft" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#30313B" flood-opacity="0.06"/>
+    </filter>
+    <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#E5E6EB"/>
+    </pattern>
+  </defs>
+
+  <!-- Фон -->
+  <g id="bg">
+    <rect width="1600" height="900" fill="#F4F5F7"/>
+  </g>
+
+  <!-- Соединительные линии -->
+  <g id="links" stroke="#E5E6EB" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M 386 450 h 24"/><path d="M 410 450 l -6 -5 m 6 5 l -6 5"/>
+    <path d="M 788 450 h 24"/><path d="M 812 450 l -6 -5 m 6 5 l -6 5"/>
+    <path d="M 1190 450 h 24"/><path d="M 1214 450 l -6 -5 m 6 5 l -6 5"/>
+  </g>
+
+  <!-- КАРТОЧКА 1: Квитанция в чате -->
+  <g id="card-1" class="card">
+    <rect x="11" y="320" width="372" height="260" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5" filter="url(#lift)"/>
+    <rect x="29" y="338" width="196" height="224" rx="12" fill="none"/>
+    <rect x="29" y="338" width="56" height="20" rx="10" fill="#F4F5F7"/>
+    <text x="57" y="352" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ШАГ 1</text>
+    <text x="29" y="392" font-size="16" font-weight="600" fill="#30313B">Квитанция в чате<tspan x="29" dy="22" font-size="12.5" font-weight="400" fill="#858691">Куратор отправляет счёт вручную.</tspan><tspan x="29" dy="17" font-size="12.5" font-weight="400" fill="#858691">Документы живут в переписке.</tspan></text>
+    <g id="btn-1">
+      <rect x="29" y="500" width="140" height="32" rx="8" fill="#30313B"/>
+      <text x="99" y="520" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">Открыть чат</text>
+    </g>
+    <!-- правая иллюстрация: мини-чат -->
+    <g id="ui-1">
+      <rect x="225" y="338" width="140" height="224" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="225" y="338" width="140" height="26" rx="12" fill="#FFFFFF"/>
+      <line x1="225" y1="364" x2="365" y2="364" stroke="#E5E6EB" stroke-width="1.2"/>
+      <circle cx="241" cy="351" r="3" fill="#E5E6EB"/><circle cx="252" cy="351" r="3" fill="#E5E6EB"/><circle cx="263" cy="351" r="3" fill="#E5E6EB"/>
+      <circle cx="245" cy="392" r="9" fill="#E5E6EB"/>
+      <rect x="260" y="378" width="86" height="42" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2" filter="url(#liftSoft)"/>
+      <g transform="translate(267,386)">
+        <rect x="0" y="0" width="22" height="26" rx="3" fill="#F4F5F7" stroke="#E5E6EB" stroke-width="1"/>
+        <line x1="4" y1="7" x2="18" y2="7" stroke="#D6D7DE" stroke-width="1.6"/>
+        <line x1="4" y1="12" x2="13" y2="12" stroke="#D6D7DE" stroke-width="1.6"/>
+        <line x1="4" y1="18" x2="16" y2="18" stroke="#9670E8" stroke-width="1.6"/>
+      </g>
+      <line x1="296" y1="386" x2="336" y2="386" stroke="#E5E6EB" stroke-width="1.8"/>
+      <line x1="296" y1="393" x2="324" y2="393" stroke="#E5E6EB" stroke-width="1.8"/>
+      <rect x="260" y="432" width="60" height="24" rx="10" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+      <circle cx="276" cy="444" r="2.2" fill="#D6D7DE"/><circle cx="285" cy="444" r="2.2" fill="#D6D7DE"/><circle cx="294" cy="444" r="2.2" fill="#D6D7DE"/>
+      <rect x="225" y="476" width="140" height="86" rx="0" fill="none"/>
+      <rect x="233" y="486" width="124" height="66" rx="10" fill="none" stroke="#E5E6EB" stroke-width="1.2" stroke-dasharray="3 6"/>
+      <text x="295" y="524" text-anchor="middle" font-size="10" fill="#B9BAC2">история не сохраняется</text>
+    </g>
+  </g>
+
+  <!-- КАРТОЧКА 2: Ручная оплата -->
+  <g id="card-2" class="card">
+    <rect x="413" y="320" width="372" height="260" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5" filter="url(#lift)"/>
+    <rect x="431" y="338" width="56" height="20" rx="10" fill="#F4F5F7"/>
+    <text x="459" y="352" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ШАГ 2</text>
+    <text x="431" y="392" font-size="16" font-weight="600" fill="#30313B">Ручная оплата<tspan x="431" dy="22" font-size="12.5" font-weight="400" fill="#858691">Студент вводит реквизиты</tspan><tspan x="431" dy="17" font-size="12.5" font-weight="400" fill="#858691">в приложении банка сам.</tspan></text>
+    <g id="btn-2">
+      <rect x="431" y="500" width="150" height="32" rx="8" fill="#30313B"/>
+      <text x="506" y="520" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">Ввести реквизиты</text>
+    </g>
+    <!-- правая иллюстрация: форма банка -->
+    <g id="ui-2">
+      <rect x="627" y="338" width="140" height="224" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="627" y="338" width="140" height="26" rx="12" fill="#FFFFFF"/>
+      <line x1="627" y1="364" x2="767" y2="364" stroke="#E5E6EB" stroke-width="1.2"/>
+      <text x="643" y="352" font-size="10" font-weight="600" fill="#858691">Перевод по реквизитам</text>
+      <text x="643" y="384" font-size="9" fill="#858691">Номер счёта</text>
+      <rect x="643" y="390" width="108" height="24" rx="6" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+      <line x1="650" y1="402" x2="668" y2="402" stroke="#30313B" stroke-width="1.6"/>
+      <text x="643" y="428" font-size="9" fill="#858691">Сумма и назначение</text>
+      <rect x="643" y="434" width="108" height="24" rx="6" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2"/>
+      <line x1="650" y1="446" x2="678" y2="446" stroke="#D6D7DE" stroke-width="1.6"/>
+      <rect x="643" y="470" width="108" height="26" rx="7" fill="#9670E8"/>
+      <text x="697" y="487" text-anchor="middle" font-size="10.5" font-weight="600" fill="#fff">Перевести</text>
+      <g id="loader">
+        <circle cx="665" cy="520" r="8" fill="none" stroke="#E5E6EB" stroke-width="2.4"/>
+        <path d="M 665 512 a 8 8 0 0 1 8 8" fill="none" stroke="#9670E8" stroke-width="2.4" stroke-linecap="round"/>
+        <text x="682" y="524" font-size="10" fill="#858691">Обработка…</text>
+      </g>
+      <rect x="643" y="536" width="86" height="20" rx="10" fill="#FDEEEF"/>
+      <text x="686" y="550" text-anchor="middle" font-size="10" font-weight="600" fill="#ED777C">до 3 дней</text>
+    </g>
+  </g>
+
+  <!-- КАРТОЧКА 3: Чек куратору -->
+  <g id="card-3" class="card">
+    <rect x="815" y="320" width="372" height="260" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5" filter="url(#lift)"/>
+    <rect x="833" y="338" width="56" height="20" rx="10" fill="#F4F5F7"/>
+    <text x="861" y="352" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ШАГ 3</text>
+    <text x="833" y="392" font-size="16" font-weight="600" fill="#30313B">Чек — куратору<tspan x="833" dy="22" font-size="12.5" font-weight="400" fill="#858691">Подтверждение проходит</tspan><tspan x="833" dy="17" font-size="12.5" font-weight="400" fill="#858691">через ручную сверку.</tspan></text>
+    <g id="btn-3">
+      <rect x="833" y="500" width="140" height="32" rx="8" fill="#30313B"/>
+      <text x="903" y="520" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">Отправить чек</text>
+    </g>
+    <!-- правая иллюстрация: отправка чека -->
+    <g id="ui-3">
+      <rect x="1029" y="338" width="140" height="224" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="1029" y="338" width="140" height="26" rx="12" fill="#FFFFFF"/>
+      <line x1="1029" y1="364" x2="1169" y2="364" stroke="#E5E6EB" stroke-width="1.2"/>
+      <text x="1045" y="352" font-size="10" font-weight="600" fill="#858691">Чек об оплате</text>
+      <g transform="translate(1045,382)">
+        <path d="M 0 3 h 22 l 7 7 v 32 h -29 z" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.4"/>
+        <path d="M 22 3 v 7 h 7"/>
+        <line x1="6" y1="15" x2="22" y2="15" stroke="#D6D7DE" stroke-width="1.8"/>
+        <line x1="6" y1="21" x2="17" y2="21" stroke="#D6D7DE" stroke-width="1.8"/>
+        <path d="M 7 30 l 5 5 l 9 -10" stroke="#55C99A" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <path d="M 1082 430 q 0 18 20 18 h 18" fill="none" stroke="#D6D7DE" stroke-width="1.6" stroke-dasharray="2 5"/>
+      <circle cx="1029" cy="462" r="0" fill="none"/>
+      <rect x="1045" y="452" width="86" height="28" rx="9" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2" filter="url(#liftSoft)"/>
+      <circle cx="1059" cy="466" r="6" fill="#E5E6EB"/>
+      <line x1="1070" y1="462" x2="1220" y2="462" stroke="none"/>
+      <line x1="1070" y1="461" x2="1120" y2="461" stroke="#D6D7DE" stroke-width="1.6"/>
+      <line x1="1070" y1="470" x2="1106" y2="470" stroke="#D6D7DE" stroke-width="1.6"/>
+      <g id="sendBtn">
+        <rect x="1045" y="496" width="108" height="28" rx="7" fill="#9670E8"/>
+        <text x="1099" y="514" text-anchor="middle" font-size="10.5" font-weight="600" fill="#fff">Отправить чек</text>
+      </g>
+      <g id="sentOk">
+        <circle cx="1180" cy="510" r="13" fill="#55C99A"/>
+        <path d="M 1174 510 l 4 4 l 8 -9" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="1099" y="542" text-anchor="middle" font-size="9.5" fill="#B9BAC2">проверит куратор вручную</text>
+    </g>
+  </g>
+
+  <!-- КАРТОЧКА 4: Уточнение статуса -->
+  <g id="card-4" class="card">
+    <rect x="1217" y="320" width="372" height="260" rx="16" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.5" filter="url(#lift)"/>
+    <rect x="1235" y="338" width="56" height="20" rx="10" fill="#F4F5F7"/>
+    <text x="1263" y="352" text-anchor="middle" font-size="10.5" font-weight="600" fill="#858691">ШАГ 4</text>
+    <text x="1235" y="392" font-size="16" font-weight="600" fill="#30313B">Статус неизвестен<tspan x="1235" dy="22" font-size="12.5" font-weight="400" fill="#858691">В системе нет подтверждения —</tspan><tspan x="1235" dy="17" font-size="12.5" font-weight="400" fill="#858691">студент снова пишет куратору.</tspan></text>
+    <g id="btn-4">
+      <rect x="1235" y="500" width="156" height="32" rx="8" fill="#30313B"/>
+      <text x="1313" y="520" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">Написать куратору</text>
+    </g>
+    <!-- правая иллюстрация: статус-лист -->
+    <g id="ui-4">
+      <rect x="1431" y="338" width="140" height="224" rx="12" fill="#F8F9FB" stroke="#E5E6EB" stroke-width="1.2"/>
+      <rect x="1431" y="338" width="140" height="26" rx="12" fill="#FFFFFF"/>
+      <line x1="1431" y1="364" x2="1571" y2="364" stroke="#E5E6EB" stroke-width="1.2"/>
+      <text x="1447" y="352" font-size="10" font-weight="600" fill="#858691">Статус платежа</text>
+      <g font-size="10" fill="#858691">
+        <circle cx="1452" cy="386" r="4" fill="#55C99A"/>
+        <text x="1464" y="390">Чек отправлен</text>
+        <circle cx="1452" cy="412" r="4" fill="#F5BD58"/>
+        <text x="1464" y="416">Перевод идёт</text>
+        <circle cx="1452" cy="438" r="4" fill="#ED777C"/>
+        <text x="1464" y="442">Учтён ли платёж?</text>
+      </g>
+      <line x1="1447" y1="458" x2="1555" y2="458" stroke="#E5E6EB" stroke-width="1.2" stroke-dasharray="3 5"/>
+      <rect x="1447" y="470" width="108" height="34" rx="8" fill="#FFFFFF" stroke="#E5E6EB" stroke-width="1.2" filter="url(#liftSoft)"/>
+      <text x="1501" y="491" text-anchor="middle" font-size="9.5" fill="#858691">уточнить в чате</text>
+      <g id="cursor">
+        <path d="M 1512 512 l 0 14 l 4 -4 l 3 6 l 4 -2 l -3 -6 l 5 0 z" fill="#FFFFFF" stroke="#30313B" stroke-width="1.6" stroke-linejoin="round"/>
+      </g>
+      <rect x="1447" y="530" width="86" height="20" rx="10" fill="#FDEEEF"/>
+      <text x="1490" y="544" text-anchor="middle" font-size="10" font-weight="600" fill="#ED777C">ответа нет</text>
+    </g>
+  </g>
+</svg>
