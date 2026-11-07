@@ -145,7 +145,7 @@ a { color: inherit; }
 .proj-top img { width: 132px; height: 132px; object-fit: contain; margin: 28px 0; }
 .proj-top.mockup {
   background: var(--card);
-  padding: 16px;
+  padding: 24px 24px 0;
 }
 .proj-top.mockup img {
   width: 100%;
@@ -270,6 +270,7 @@ a { color: inherit; }
   .bento { gap: 12px; }
   .cell { padding: 18px; border-radius: 20px; }
   .proj-top { margin: -18px -18px 0; }
+  .proj-top.mockup { padding: 18px 18px 0; }
   .photos { grid-template-columns: repeat(2, 1fr); }
   .step { grid-template-columns: 1fr; }
 }

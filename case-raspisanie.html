@@ -15,6 +15,7 @@
     .sub-head{font-weight:500;color:var(--ink);margin-top:8px}
   
   .cell-kicker{font-size:24px;line-height:1.2;color:var(--ink);text-transform:none;letter-spacing:normal;font-weight:500}
+    .pin-list li::before{content:"📌";width:auto;height:auto;background:none;border-radius:0;margin-top:0}
     @media (max-width:1024px){ .nums{grid-template-columns:repeat(3,1fr)} }
     @media (max-width:640px){ .nums{grid-template-columns:1fr} }
       .list p{font-size:16px;color:var(--ink)}
@@ -32,6 +33,7 @@
       <a href="#iteraciya-1-sozdat-udobn">Итерация 1. создать удобное расписание для студента</a>
       <a href="#gipotezy">Гипотезы</a>
       <a href="#chto-sproektirovala">Что спроектировала</a>
+      <a href="#chellendzh">Челлендж</a>
       <a href="#rezul-tat">Результат</a>
       <a href="#iteraciya-2-ob-edinit-ra">Итерация 2. объединить расписания нескольких групп и добавить преподавателей</a>
       <a href="#gipotezy-2">Гипотезы</a>
@@ -39,8 +41,7 @@
       <a href="#chto-izmenilos-2">Что изменилось</a>
       <a href="#iteraciya-3-svyazat-rasp">Итерация 3. связать расписание с учебным процессом</a>
       <a href="#gipotezy-3">Гипотезы</a>
-      <a href="#reshenie-2">Решение</a>
-      <a href="#chto-izmenilos-3">Что изменилось</a>
+      <a href="#rezultat-3">Результат</a>
       <a href="#itog">Итог</a>
     </nav>
   </aside>
@@ -82,14 +83,39 @@
     <section class="cell s12" id="chto-sproektirovala">
       <span class="cell-kicker">Что спроектировала</span>
       <ul class="list"><li><p>Два режима просмотра: лента и сетка.</p></li><li><p>Карточки с временем, дисциплиной, типом занятия и аудиторией.</p></li><li><p>Цветовое обозначение типов занятий.</p></li><li><p>Мини-календарь для перехода к нужной дате.</p></li><li><p>Отдельный блок «Расписание на сегодня».</p></li></ul>
-      <p class="cell-text primary">Одним из главных вызовов стала цветовая система: нужно было различать типы занятий, не перегружая интерфейс. Ещё одна сложность — короткие занятия, которые должны оставаться заметными на временной сетке.</p>
-      <p class="cell-text primary">Было и техническое ограничение: время отображалось по Москве, без адаптации под часовой пояс студента.</p>
+    </section>
+    <section class="cell s12" id="chellendzh">
+      <span class="cell-kicker">Челлендж</span>
+      <ul class="list pin-list">
+        <li><p>Цветовая система: нужно было различать типы занятий, не перегружая интерфейс.</p></li>
+        <li><p>Короткие занятия: должны оставаться заметными на временной сетке.</p></li>
+      </ul>
+      <img class="zoomable" src="assets/case-raspisanie-lessons-cards.png" alt="Карточки занятий разных типов в сетке расписания" style="cursor:zoom-in;width:100%;height:auto;display:block;border-radius:16px;margin-top:4px">
     </section>
     <section class="cell s12" id="rezul-tat">
       <span class="cell-kicker">Результат</span>
       <p class="cell-text primary">Вместо поиска информации в таблицах и чатах студент получил единое расписание в личном кабинете. Теперь можно быстро посмотреть занятия на сегодня, оценить всю неделю или перейти к конкретной дате.</p>
       <p class="cell-text primary">После запуска я продолжила собирать обратную связь через поддержку, кураторов и чаты. Студенты стали делиться скриншотами расписания из личного кабинета вместо пересылки таблиц. Блок «Расписание на сегодня» стал частым способом открыть расписание. Также перестали встречаться повторные жалобы на сливающиеся карточки занятий.</p>
     </section>
+    <div style="grid-column:span 12">
+    <div class="carousel" style="position:relative;border-radius:24px;overflow:hidden;margin:12px auto;width:calc(100% - 24px);outline:12px solid #252525;outline-offset:0">
+      <div style="position:relative">
+      <div class="carousel-track" style="display:flex;transition:transform .4s ease">
+        <img class="zoomable" src="assets/case-raspisanie-day-view.png" alt="Дневной режим отображения. Справа названия на сегодня и календарь" data-cap="Дневной режим отображения. Справа названия на сегодня и календарь" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-raspisanie-week-view.png" alt="Недельный режим отображения и информация по занятию" data-cap="Недельный режим отображения и информация по занятию" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+      </div>
+      <button onclick="carGo(this,-1)" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8249;</button>
+      <button onclick="carGo(this,1)" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8250;</button>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 0 0">
+      <span class="car-cap" style="font-size:14px;color:var(--ink)">Дневной режим отображения. Справа названия на сегодня и календарь</span>
+      <span style="display:flex;gap:6px">
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.9"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+      </span>
+    </div>
+    </div>
     <section class="cell s12" id="iteraciya-2-ob-edinit-ra">
       <span class="cell-kicker">Итерация 2. объединить расписания нескольких групп и добавить преподавателей</span>
       <p class="cell-text primary sub-head">Бизнес-задачи</p>
@@ -103,11 +129,44 @@
     </section>
     <section class="cell s12" id="reshenie">
       <span class="cell-kicker">Решение</span>
-      <p class="cell-text primary">Главным решением стала сводная недельная сетка. Теперь студент может выбрать несколько групп и увидеть все занятия одновременно.</p>
-      <p class="cell-text primary">Также:</p>
-      <ul class="list"><li><p>Переименовала режимы «Лента» и «Сетка» в понятные «День» и «Неделя».</p></li><li><p>Добавила поиск по дисциплинам и фильтры.</p></li><li><p>Реализовала переключение между ролями студента и преподавателя.</p></li><li><p>Добавила преподавателям возможность смотреть собственное расписание и расписание любой группы.</p></li><li><p>«Найти свободные окна». Добавила отдельную кнопку, которая позволяет найти свободные промежутки в расписании без необходимости вручную сравнивать занятия по дням и времени.</p></li><li><p>«Скоро начало». Добавила карточку в правый сайдбар. Она показывает следующее занятие на сегодня и обратный отсчёт до его начала. Студент может быстро понять, сколько времени осталось до пары.</p></li></ul>
-      <p class="cell-text primary">При проектировании сводной сетки нужно было решить отдельную задачу: занятия из разных групп могли проходить одновременно. Важно было показать их все, не превращая недельную сетку в нагромождение карточек.</p>
+      <p class="cell-text primary">Во второй итерации добавила несколько важных возможностей, которые расширили сценарии работы с расписанием.</p>
+      <p class="cell-text primary sub-head">Основные изменения:</p>
+      <ul class="list">
+        <li><p><b>Несколько групп в одном расписании.</b> Студент может выбрать сразу несколько групп и увидеть все занятия в общей недельной сетке. Больше не нужно переключаться между группами и сравнивать расписания вручную.</p></li>
+        <li><p><b>Расписание для преподавателей.</b> Добавила переключение между ролями студента и преподавателя. Преподаватели могут смотреть своё расписание и расписание любой группы.</p></li>
+        <li><p><b>Поиск и фильтры.</b> Добавила поиск по дисциплинам и фильтры, чтобы быстрее находить нужные занятия.</p></li>
+        <li><p><b>Поиск свободных окон.</b> Добавила отдельную кнопку, которая помогает найти свободные промежутки в расписании без ручного сравнения занятий.</p></li>
+      </ul>
+      <p class="cell-text primary sub-head">Дополнительные улучшения:</p>
+      <ul class="list">
+        <li><p>Переименовала режимы «Лента» и «Сетка» в более понятные «День» и «Неделя».</p></li>
+        <li><p>Добавила карточку «Скоро начало» в правый сайдбар. Она показывает следующее занятие на сегодня и обратный отсчёт до его начала.</p></li>
+      </ul>
+      <p class="cell-text primary">При проектировании общей сетки отдельно продумала отображение занятий из разных групп, которые проходят одновременно. Нужно было показать все занятия так, чтобы карточки не сливались и оставались читаемыми.</p>
     </section>
+    <div style="grid-column:span 12">
+    <div class="carousel" style="position:relative;border-radius:24px;overflow:hidden;margin:12px auto;width:calc(100% - 24px);outline:12px solid #252525;outline-offset:0">
+      <div style="position:relative">
+      <div class="carousel-track" style="display:flex;transition:transform .4s ease">
+        <img class="zoomable" src="assets/case-raspisanie-day-student.png" alt="Просмотр студентом расписания по нескольким группам" data-cap="Просмотр студентом расписания по нескольким группам" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-raspisanie-day-student-lesson.png" alt="Просмотр информации по онлайн занятию" data-cap="Просмотр информации по онлайн занятию" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-raspisanie-week-teacher.png" alt="Расписание преподавателя. Подсветка возможных накладок занятий." data-cap="Расписание преподавателя. Подсветка возможных накладок занятий." style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-raspisanie-multi-groups.png" alt="Функция поиска свободного времени" data-cap="Функция поиска свободного времени" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+      </div>
+      <button onclick="carGo(this,-1)" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8249;</button>
+      <button onclick="carGo(this,1)" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8250;</button>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 0 0">
+      <span class="car-cap" style="font-size:14px;color:var(--ink)">Просмотр студентом расписания по нескольким группам</span>
+      <span style="display:flex;gap:6px">
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.9"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+      </span>
+    </div>
+    </div>
     <section class="cell s12" id="chto-izmenilos-2">
       <span class="cell-kicker">Что изменилось</span>
       <p class="cell-text primary">Вместо отдельных расписаний студент получил общую картину учебной недели. Теперь не нужно переключаться между группами и самостоятельно сверять время занятий. Преподаватели получили собственное расписание в личном кабинете вместо таблиц от методистов.</p>
@@ -115,7 +174,6 @@
     </section>
     <section class="cell s12" id="iteraciya-3-svyazat-rasp">
       <span class="cell-kicker">Итерация 3. связать расписание с учебным процессом</span>
-      <p class="cell-text primary sub-head">Исследование</p>
       <p class="cell-text primary">На третьей итерации я провела короткие интервью с пятью студентами и тремя преподавателями. Каждая беседа длилась 20–30 минут и проходила с демонстрацией текущего интерфейса. Мне было важно понять, какие задачи расписание пока не закрывает в повседневном использовании.</p>
       <p class="cell-text primary">Выяснилось, что карточки занятий сложно быстро считывать: названия дисциплин теряются, а тип занятия перетягивает на себя слишком много внимания. При этом для студента главное — сразу понять, какая дисциплина и во сколько.</p>
       <p class="cell-text primary">Обнаружились и новые сценарии использования:</p>
@@ -125,21 +183,50 @@
       <span class="cell-kicker">Гипотезы</span>
       <ul class="list"><li><p>Если выделить название дисциплины и время, студент быстрее поймёт, какое занятие его ждёт.</p></li><li><p>Если добавить выгрузку в Excel, преподаватели смогут пользоваться расписанием без интернета.</p></li><li><p>Если связать записи вебинаров с занятиями, студент сможет вернуться к пропущенному материалу без поиска в чатах.</p></li><li><p>Если расширить существующую систему типов занятий, расписание сможет поддерживать новые форматы обучения.</p></li></ul>
     </section>
-    <section class="cell s12" id="reshenie-2">
-      <span class="cell-kicker">Решение</span>
-      <ul class="list"><li><p>Пересобрала карточку занятия. Выделила название дисциплины и время, а тип занятия сделала менее заметным. Теперь основная информация считывается быстрее.</p></li><li><p>Расширила систему типов занятий. Добавила новые типы, сохранив единый принцип визуального отображения.</p></li><li><p>Добавила выгрузку в Excel. Преподаватели получили возможность скачать расписание и пользоваться им без подключения к интернету.</p></li><li><p>Связала занятия с вебинарами и их записями. Теперь студент может перейти к онлайн-занятию или посмотреть запись прямо из расписания.</p></li></ul>
+    <section class="cell s12" id="rezultat-3">
+      <span class="cell-kicker">Результат</span>
+      <ul class="list">
+        <li><p><b>Обновила карточку занятия.</b> Сделала название дисциплины и время заметнее, а тип занятия менее акцентным. Теперь главное в карточке проще найти взглядом.</p></li>
+        <li><p><b>Добавила новые типы занятий.</b> Расширила список типов, сохранив единый стиль их отображения.</p></li>
+        <li><p><b>Добавила выгрузку расписания в Excel.</b> Теперь преподаватели могут скачать расписание и пользоваться им без интернета.</p></li>
+        <li><p><b>Добавила ссылки на вебинары и записи.</b> Студенты могут перейти к онлайн-занятию или посмотреть запись прямо из расписания.</p></li>
+      </ul>
+      <p class="cell-text primary">После этих изменений расписание стало не просто местом, где можно посмотреть время занятий. Теперь из него можно сразу перейти к вебинару или записи, не нужно искать ссылки в чатах. Преподаватели могут скачать расписание и пользоваться им офлайн.</p>
+      <p class="cell-text primary">После запуска я продолжила собирать обратную связь через поддержку и чаты, а также смотреть статистику использования. Вопросы о том, где найти ссылку на вебинар, практически перестали появляться. Количество скачиваний Excel растёт в начале каждого семестра. Также больше не встречались жалобы на то, что названия дисциплин сложно прочитать.</p>
     </section>
-    <section class="cell s12" id="chto-izmenilos-3">
-      <span class="cell-kicker">Что изменилось</span>
-      <p class="cell-text primary">Расписание перестало быть только местом, где можно посмотреть время занятий. Оно стало точкой входа в учебные материалы: студент может перейти от карточки занятия к вебинару или его записи, не возвращаясь к перепискам.</p>
-      <p class="cell-text primary">Преподаватели получили возможность скачать расписание для работы офлайн.</p>
-      <p class="cell-text primary">После запуска я продолжила отслеживать обратную связь через поддержку и чаты, а также смотреть аналитику использования. Вопросы о поиске ссылок на вебинары практически перестали встречаться. Количество скачиваний Excel стабильно увеличивается в начале семестра. После обновления карточек также перестали встречаться жалобы на нечитаемые названия дисциплин.</p>
-    </section>
+    <div style="grid-column:span 12">
+    <div class="carousel" style="position:relative;border-radius:24px;overflow:hidden;margin:12px auto;width:calc(100% - 24px);outline:12px solid #252525;outline-offset:0">
+      <div style="position:relative">
+      <div class="carousel-track" style="display:flex;transition:transform .4s ease">
+        <img class="zoomable" src="assets/case-raspisanie-week-teacher-export.png" alt="Расписание" data-cap="Расписание" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-raspisanie-webinar-recording.png" alt="Просмотр записи вебинаров" data-cap="Просмотр записи вебинаров" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-raspisanie-download.png" alt="Скачивание расписания" data-cap="Скачивание расписания" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-raspisanie-color-picking.png" alt="Подбор цвета по занятиям" data-cap="Подбор цвета по занятиям" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+      </div>
+      <button onclick="carGo(this,-1)" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8249;</button>
+      <button onclick="carGo(this,1)" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8250;</button>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 0 0">
+      <span class="car-cap" style="font-size:14px;color:var(--ink)">Расписание</span>
+      <span style="display:flex;gap:6px">
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.9"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+      </span>
+    </div>
+    </div>
     <section class="cell s12" id="itog">
       <span class="cell-kicker">Итог</span>
-      <p class="cell-text primary">За три итерации я превратила базовое расписание для одной группы в единый сервис для студентов и преподавателей.</p>
-      <p class="cell-text primary">Сначала студентам стало проще ориентироваться в занятиях на день и неделю. Затем появилась возможность объединять расписания нескольких групп, быстро находить дисциплины и переключаться между ролями. На следующем этапе расписание связалось с вебинарами и учебными материалами, а преподаватели получили офлайн-доступ.</p>
-      <p class="cell-text primary">В результате расписание стало не просто способом узнать, когда следующая пара, а ежедневной точкой входа в учебный процесс.</p>
+      <div class="nums" style="grid-template-columns:repeat(3,1fr)">
+        <div class="num"><div class="v">100 тыс+</div><div class="k">пользователей работают с расписанием</div></div>
+        <div class="num"><div class="v">−70%</div><div class="k">обращений в поддержку по вопросам расписания</div></div>
+        <div class="num"><div class="v">12 000</div><div class="k">переходов из расписания в онлайн-занятия</div></div>
+      </div>
+      <p class="cell-text primary">За три итерации расписание выросло из инструмента для просмотра занятий одной группы в единый сервис для студентов и преподавателей.</p>
+      <p class="cell-text primary">Студенты получили возможность планировать неделю сразу по нескольким группам, искать нужные занятия и свободные окна. Преподаватели могут работать со своим расписанием и расписанием групп. Позже в расписании появились ссылки на онлайн-занятия и записи, а также возможность выгружать расписание в Excel.</p>
+      <p class="cell-text primary">В итоге расписание стало не просто способом узнать время следующей пары, а одной из основных точек входа в учебный процесс.</p>
     </section>
     </div>
       <section class="cell s12">
@@ -160,7 +247,7 @@
           </div>
         </a>
         <a class="slider-card" href="case-konstruktor.html">
-          <div class="sl-cover"><img src="assets/case-cover-generic.jpg" alt="Конструктор курсов в LMS"></div>
+          <div class="sl-cover"><img src="assets/case-konstruktor-cover.png" alt="Конструктор курсов в LMS"></div>
           <div class="sl-body">
             <div class="proj-meta" style="position:static;opacity:1"><span class="tag">EdTech</span><span class="tag">B2B</span></div>
             <h3 class="cell-title">Конструктор курсов в LMS</h3>
@@ -189,5 +276,20 @@
   </main>
 </div>
 <script src="app.js?v8"></script>
+<script>
+function carGo(btn, dir) {
+  var root = btn.closest(".carousel");
+  var wrap = root.parentElement;
+  var track = root.querySelector(".carousel-track");
+  var slides = track.children.length;
+  var idx = parseInt(root.dataset.idx || "0");
+  idx = Math.min(Math.max(idx + dir, 0), slides - 1);
+  root.dataset.idx = idx;
+  track.style.transform = "translateX(-" + idx * 100 + "%)";
+  wrap.querySelectorAll(".car-dot").forEach(function (d, i) { d.style.opacity = i === idx ? ".9" : ".35"; });
+  var cap = wrap.querySelector(".car-cap");
+  if (cap) cap.textContent = track.children[idx].getAttribute("data-cap") || "";
+}
+</script>
 </body>
 </html>
