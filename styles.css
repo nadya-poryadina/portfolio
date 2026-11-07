@@ -402,3 +402,30 @@ a { color: inherit; }
 .side-nav a.nav-active::before { content: ''; position: absolute; left: -14px; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; border-radius: 50%; background: var(--ink); }
 .proj-top.mockup img { margin-bottom: 0; }
 .proj-body { padding-top: 16px; }
+
+/* Кейс конструктора: гипотезы и валидация первой итерации */
+.case-hypotheses {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--ink-4);
+  border-radius: var(--radius-in);
+  padding: 4px 20px;
+}
+.case-hypotheses p {
+  padding: 16px 0;
+  color: var(--primary);
+  font-size: var(--text-m);
+  line-height: 1.55;
+}
+.case-hypotheses p + p { border-top: 1px solid #DDDDDF; }
+.validation-checks li::before {
+  content: "✅";
+  background: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.55;
+}

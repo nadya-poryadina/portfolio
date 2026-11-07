@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бенчмарк: веб-расписания · таблица</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f6f6f8;color:#1c1c22;padding:22px 26px}
+.wrap{max-width:1240px;margin:0 auto}
+h1{font-size:19px;letter-spacing:-0.01em}
+.sub{font-size:12px;color:#8a8f99;margin:3px 0 14px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);font-size:12px}
+th{background:#5b52c7;color:#fff;text-align:left;font-weight:600;padding:9px 12px;font-size:11.5px}
+td{padding:9px 12px;border-bottom:1px solid #eff0f3;vertical-align:top;line-height:1.42}
+tr:last-child td{border-bottom:none}
+td.svc{font-weight:650;white-space:nowrap}
+td.svc span{display:block;font-weight:500;color:#8a8f99;font-size:10.5px;margin-top:1px;white-space:normal}
+.mode{color:#5b52c7;font-weight:600;white-space:nowrap}
+.plus{color:#1a7f4b}
+.minus{color:#c0392b}
+ul{list-style:none}
+li{margin-bottom:3px;padding-left:13px;position:relative}
+li::before{content:'';position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%}
+.plus li::before{background:#1a7f4b}
+.minus li::before{background:#c0392b}
+</style></head><body><div class="wrap">
+<h1>Бенчмарк веб-расписаний: 7 решений</h1>
+<div class="sub">Режим просмотра · сильные и слабые стороны в пользовательских сценариях и визуале</div>
+<table>
+<tr><th style="width:15%">Сервис</th><th style="width:11%">Режим</th><th style="width:37%">Сильные стороны</th><th style="width:37%">Недостатки</th></tr>
+<tr>
+<td class="svc">СПбГУ<span>вузовское расписание</span></td><td class="mode">День · список</td>
+<td class="plus"><ul><li>лёгкая карточка: время и место первыми</li><li>поиск по преподавателю и аудитории закрывает сценарий «где пара»</li></ul></td>
+<td class="minus"><ul><li>планирование недели требует 7 переключений по дням</li><li>типы занятий визуально не различаются</li></ul></td>
+</tr>
+<tr>
+<td class="svc">ЛК ВШЭ<span>вузовский кабинет</span></td><td class="mode">Неделя · сетка</td>
+<td class="plus"><ul><li>неделя целиком на одном экране</li><li>семестровая логика связана с учебным планом</li></ul></td>
+<td class="minus"><ul><li>нет визуальной иерархии: время и аудитория не выделены</li><li>сетка не читается на мобильных</li></ul></td>
+</tr>
+<tr>
+<td class="svc">Moodle<span>LMS-календарь</span></td><td class="mode">Месяц · события</td>
+<td class="plus"><ul><li>пары и дедлайны в одной точке</li><li>экспорт в iCal и уведомления</li></ul></td>
+<td class="minus"><ul><li>нет типов занятий, аудиторий, ссылок на вебинары</li><li>важное не отделено от второстепенного</li></ul></td>
+</tr>
+<tr>
+<td class="svc">Google Calendar<span>эталон календаря</span></td><td class="mode">Неделя · блоки</td>
+<td class="plus"><ul><li>эталон навигации: «сегодня», стрелки, мини-календарь</li><li>в карточке только название и место</li></ul></td>
+<td class="minus"><ul><li>модель не знает «пару»: нет типа, преподавателя, ссылки</li><li>свободные окна не акцентированы</li></ul></td>
+</tr>
+<tr>
+<td class="svc">Политех СПбПУ<span>вузовское расписание</span></td><td class="mode">Неделя · таблица</td>
+<td class="plus"><ul><li>чётные и нечётные недели решены честно</li><li>эталон по отзывам студентов в опросе</li></ul></td>
+<td class="minus"><ul><li>занятия разных типов сливаются</li><li>нет подсветки изменений; слабый мобильный сценарий</li></ul></td>
+</tr>
+<tr>
+<td class="svc">TU Delft · MyTimetable<span>Нидерланды</span></td><td class="mode">Неделя · личная</td>
+<td class="plus"><ul><li>«моё» расписание собирается подписками на курсы</li><li>синхронизация с Google и Outlook в ядре</li></ul></td>
+<td class="minus"><ul><li>при плотной сетке карточки обедняются до названий</li><li>качество зависит от данных вуза</li></ul></td>
+</tr>
+<tr>
+<td class="svc">Manchester · CELCAT<span>Великобритания</span></td><td class="mode">Неделя · сетка</td>
+<td class="plus"><ul><li>фильтры по ролям: студент, преподаватель, аудитории</li><li>печать в PDF одним кликом</li></ul></td>
+<td class="minus"><ul><li>устаревший визуал, мелкая типографика</li><li>мобильного сценария нет</li></ul></td>
+</tr>
+</table>
+</div></body></html>

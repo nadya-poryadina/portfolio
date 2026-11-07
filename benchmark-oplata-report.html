@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бенчмарк: оплата и кошелёк</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f6f6f8;color:#1c1c22;padding:40px 24px}
+.wrap{max-width:1000px;margin:0 auto}
+h1{font-size:26px;margin-bottom:6px}
+.sub{color:#777;font-size:14px;margin-bottom:28px}
+.chips{display:flex;gap:10px;margin-bottom:32px;flex-wrap:wrap}
+.chip{background:#6c5ce7;color:#fff;border-radius:20px;padding:6px 16px;font-size:13px;font-weight:600}
+.chip.gray{background:#e8e8ee;color:#555;font-weight:500}
+h2{font-size:18px;margin:30px 0 14px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05);font-size:12.5px}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid #eee;line-height:1.4}
+th{background:#efeff4;font-size:12px}
+td:first-child{font-weight:600;white-space:nowrap}
+.yes{color:#1fa35b;font-weight:700}
+.no{color:#c33;font-weight:700}
+.part{color:#d18b00;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:8px}
+.card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,.05);border-top:3px solid #6c5ce7}
+.card b{display:block;font-size:14px;margin-bottom:6px}
+.card p{font-size:13px;line-height:1.5;color:#333}
+.card .who{color:#8b7ff0;font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+@media print{body{background:#fff}table,.card{box-shadow:none;border:1px solid #eee}}
+</style></head><body><div class="wrap">
+<h1>Бенчмарк-анализ: оплата и кошелёк</h1>
+<div class="sub">Кейс «Оплата обучения» · анализ паттернов оплаты и лицевого счёта</div>
+<div class="chips"><span class="chip">7 сервисов</span><span class="chip gray">4 категории</span><span class="chip gray">5 критериев</span></div>
+
+<h2>Кого и зачем сравнивала</h2>
+<p style="font-size:13.5px;line-height:1.55;color:#333;max-width:760px">Разбираю четыре категории: вузовские личные кабинеты (прямые аналоги), EDU-платформы (оплата обучения онлайн), банковские приложения (эталон платёжного UX) и маркетплейсы с кошельком (лучшая механика баланса). Цель — понять, какие паттерны оплаты и работы с лицевым счётом уже стали стандартом ожиданий студента.</p>
+
+<table>
+<tr><th>Сервис</th><th>Способы оплаты</th><th>Автоплатёж / регулярные списания</th><th>Кошелёк / лицевой счёт</th><th>Гибкая сумма пополнения</th><th>История и статусы</th></tr>
+<tr><td>ЛКС ВШЭ</td><td>Карта, ссылка на оплату из договора, квитанция</td><td class="no">Нет</td><td class="yes">Да: договор, начисления, долг по семестрам</td><td class="part">Суммы из договора</td><td class="part">Платежи и квитанции в истории</td></tr>
+<tr><td>Skyeng</td><td>Карта, рассрочка</td><td class="yes">Да: списания по расписанию занятий</td><td class="yes">Да: баланс занятий-абонемент</td><td class="part">Пакеты занятий</td><td class="yes">История списаний по каждому уроку</td></tr>
+<tr><td>Skillbox / Нетология</td><td>Карта, СБП, рассрочка банков</td><td class="part">Рассрочка через банк-партнёр</td><td class="no">Нет: оплата курса целиком или частями</td><td class="part">Оплата частями</td><td class="yes">История заказов и платежей</td></tr>
+<tr><td>СберБанк Онлайн</td><td>Карта, СБП, QR, квитанция по реквизитам</td><td class="yes">Да: автоплатежи по расписанию и порогу</td><td class="no">Нет единого кошелька</td><td class="yes">Любая сумма, шаблоны</td><td class="yes">Полная история, чеки, статусы</td></tr>
+<tr><td>Т-Банк</td><td>Карта, СБП по телефону</td><td class="yes">Да: регулярные платежи и подписки</td><td class="part">Между своими счетами</td><td class="yes">Любая сумма, шаблоны</td><td class="yes">История с группировкой</td></tr>
+<tr><td>Ozon</td><td>Карта, СБП, QR в пунктах, оплата при получении</td><td class="part">Подписки Ozon</td><td class="yes">Да: баланс, возвраты на баланс</td><td class="yes">Предзаполненная сумма заказа</td><td class="yes">Статусы каждой операции</td></tr>
+<tr><td>Яндекс (ID)</td><td>Карта, СБП</td><td class="yes">Да: автопополнение при нулевом балансе</td><td class="yes">Да: единый баланс сервисов</td><td class="yes">Автопополнение на заданную сумму</td><td class="yes">История пополнений и списаний</td></tr>
+</table>
+
+<h2>Паттерны, которые стоит забрать</h2>
+<div class="cards">
+<div class="card"><span class="who">Оплата</span><b>СБП и QR — стандарт ожиданий</b><p>Во всех платёжных сценариях вне карты студенты ждут СБП и QR. Квитанция остаётся страховкой для тех, кому нужен документ. В макете уже есть все три способа: онлай-оплата, QR, квитанция. Это подтверждено бенчмарком.</p></div>
+<div class="card"><span class="who">Оплата</span><b>Предзаполненные суммы</b><p>Ozon подставляет сумму заказа, Skyeng — стоимость пакета. Студенту не нужно считать самому: в флоу уже заложены варианты «Долг» 50 000 и «Долг и счёт за текущий семестр» 100 000. Это правильный паттерн, оставляем.</p></div>
+<div class="card"><span class="who">Долги</span><b>Автоплатёж как страховка от просрочки</b><p>Сбер и Т-Банк дают автоплатёж по дате и по порогу. Для обучения аналог: автосписание или напоминание перед датой платежа из графика. Снимает главную боль: просрочку семестра.</p></div>
+<div class="card"><span class="who">Кошелёк</span><b>Баланс с понятным статусом денег</b><p>Ozon и Яндекс показывают, где деньги и что с ними происходит. В кейсе этому служит экран «Долг → Оплачено»: лицевой счёт, зачисление, переплата. Важно предупредить о сроке зачисления, это уже есть в тексте модалки.</p></div>
+<div class="card"><span class="who">Кошелёк</span><b>Деньги распределяются сами</b><p>В Skyeng списания привязаны к расписанию, в Озоне возврат автоматически идёт на баланс. Для лицевого счёта вуза так же: пополнение должно само закрывать долг по графику, студенту не нужно распределять вручную.</p></div>
+<div class="card"><span class="who">Прозрачность</span><b>История + чек в один клик</b><p>Все банковские паттерны дают историю и чек. Для доверия к лицевому счёту: каждая строка платежа со статусом (в обработке, зачислен) и скачиваемым чеком.</p></div>
+</div>
+
+<h2>Выводы для дизайна</h2>
+<p style="font-size:13.5px;line-height:1.6;color:#333;max-width:760px">
+1. Текущий флоу соответствует рыночным паттернам: три способа оплаты, предзаполненные суммы, предупреждение о сроках зачисления, экран результата с обновлённым лицевым счётом.<br><br>
+2. Первая очередь доработок из бенчмарка: сохранение способа оплаты (шаблон), чтобы повторный платёж был в один клик, и статус платежа с чеком в истории.<br><br>
+3. Вторая очередь: напоминание о дате платежа из графика и автопополнение по порогу долга (паттерн Яндекса и Сбера).<br><br>
+4. Не внедрять сейчас: единый кошелёк с ручным распределением средств по семестрам, у студентов нет такой ментальной модели, пополнение должно само закрывать долг по графику.</p>
+</div></body></html>

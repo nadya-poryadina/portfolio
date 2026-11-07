@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v37">
+  <link rel="stylesheet" href="styles.css?v38">
   <style>
     #body{display:contents}
     .list p{color:var(--ink)}
@@ -29,11 +29,10 @@
     </a>
     <nav class="side-nav" aria-label="Разделы кейса">
       <a href="#kontekst">Контекст</a>
-      <a href="#problema">Проблема и задача</a>
+      <a href="#problema">Итерация 1. MVP: базовый сценарий создания курса</a>
       <a href="#issledovanie">Исследование</a>
-      <a href="#iteraciya-1-mvp-bazovy-s">Итерация 1. MVP: базовый сценарий создания курса</a>
-      <a href="#reshenie-i-rezultat">Результат. Итерация 1. MVP</a>
       <a href="#validaciya">Валидация</a>
+      <a href="#reshenie-i-rezultat">Результат</a>
       <a href="#iteraciya-2-gibkost-i-ad">Итерация 2. гибкость и адаптация под процессы разных подразделений</a>
       <a href="#gipotezy">Гипотезы</a>
       <a href="#reshenie-i-rezultat-2">Решение и результат</a>
@@ -68,7 +67,7 @@
 
     </section>
     <section class="cell s12" id="problema">
-      <span class="cell-kicker">Проблема и задача</span>
+      <span class="cell-kicker">Итерация 1. MVP: базовый сценарий создания курса</span>
       <p class="cell-text primary">Когда я подключилась к проекту, единого инструмента для сборки курсов не было. Одни методисты работали в Moodle, другие вели структуру в Excel, а материалы хранили на Google Дисках и Яндекс Дисках. У каждой школы был свой процесс, поэтому организация обучения зависела от подразделения и используемых инструментов.</p>
       <p class="cell-text primary">Бизнес поставил задачу создать собственный корпоративный конструктор. В нём методисты должны были собирать курсы из готового контента, настраивать структуру и готовить её к публикации.</p>
       
@@ -90,32 +89,59 @@
         <li><p>Что бы вы в первую очередь изменили в текущем процессе?</p></li>
       </ul>
       <p class="cell-text primary"><b>Главный инсайт:</b> подразделения использовали разные инструменты и терминологию, но принцип сборки курса был общим: сначала задаются параметры курса, затем формируется его структура и наполняется учебным контентом. Это стало основой модели конструктора.</p>
-      <p class="cell-text primary">Если объединить создание курса в одном сервисе — от заполнения параметров до публикации, — методистам больше не придётся собирать процесс из нескольких разрозненных инструментов.</p>
-      <p class="cell-text primary">Если разделить работу на два последовательных этапа — сначала параметры курса, затем структура и наполнение, — методистам будет проще ориентироваться в процессе и доводить курс до публикации.</p>
-      <p class="cell-text primary">Если собрать курсы в едином списке и добавить статусы, методистам будет проще управлять ими и возвращаться к черновикам.</p>
-    </section>
+</section>
+     <section class="cell s12" id="gipotezy-mvp">
+       <span class="cell-kicker">Гипотезы</span>
+       <div style="display:flex;flex-direction:column;gap:10px">
+         <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 Если объединить создание курса в одном сервисе — от заполнения параметров до публикации, — методистам больше не придётся собирать процесс из нескольких разрозненных инструментов.</div>
+         <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 Если разделить работу на два последовательных этапа — сначала параметры курса, затем структура и наполнение, — методистам будет проще ориентироваться в процессе и доводить курс до публикации.</div>
+         <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 Если собрать курсы в едином списке и добавить статусы, методистам будет проще управлять ими и возвращаться к черновикам.</div>
+       </div>
+     </section>
     <section class="cell s12" id="konkurentnyj-analiz">
       <span class="cell-kicker">Конкурентный анализ</span>
       <p class="cell-text primary">Дополнительно провела конкурентный анализ: Stepik, Moodle и другие российские и зарубежные LMS. Смотрела, как в существующих решениях устроены создание курсов и организация контента.</p>
+      <img class="zoomable" src="assets/case-konstruktor-competitors.png" alt="Конкурентный анализ: создание курсов в существующих LMS" style="cursor:zoom-in;width:100%;height:auto;display:block;border-radius:16px;margin-top:4px">
       <p class="cell-text primary">По итогам исследования выделила две основные части будущего сервиса: настройка параметров курса и создание его структуры с наполнением.</p>
-    </section>
-    <section class="cell s12" id="reshenie-i-rezultat">
-      <span class="cell-kicker">Результат. Итерация 1. MVP: базовый сценарий создания курса</span>
-      <p class="cell-text primary">Спроектировала два основных сценария: работу со списком курсов и создание отдельного курса.</p>
-      <p class="cell-text primary">В MVP вошли:</p>
-      <ul class="list"><li><p>список курсов со статусами</p></li><li><p>заполнение параметров курса</p></li><li><p>создание пятиуровневой структуры</p></li><li><p>добавление учебного контента</p></li><li><p>настройка баллов</p></li><li><p>публикация курса</p></li></ul>
-      <p class="cell-text primary">Первая версия объединила основные этапы работы в одном сервисе и задала основу конструктора.</p>
-
     </section>
     <section class="cell s12" id="validaciya">
       <span class="cell-kicker">Валидация</span>
-      <p class="cell-text primary">После запуска собрала обратную связь от методистов и проверила, как работает новый процесс.</p>
-      <ul class="list"><li><p>Единый сценарий: методисты перешли на сборку курсов в конструкторе и больше не возвращались к прежнему процессу через Excel и диски.</p></li><li><p>Два последовательных этапа: разделение на параметры и структуру помогло организовать работу, путаницы между этапами не возникало.</p></li><li><p>Список курсов: методисты возвращались к черновикам через общий список, а не искали нужные материалы по разным файлам.</p></li></ul>
+      <p class="cell-text primary">Собрала обратную связь от методистов и проверила, как работает новый процесс.</p>
+      <ul class="list validation-checks"><li><p>методисты перешли на сборку курсов в конструкторе и больше не возвращались к прежнему процессу.</p></li><li><p>разделение на параметры и структуру помогло организовать работу, путаницы между этапами не возникало.</p></li></ul>
 
     </section>
+    <section class="cell s12" id="reshenie-i-rezultat">
+      <span class="cell-kicker">Результат</span>
+      <p class="cell-text primary">Спроектировала два ключевых сценария: управление списком курсов и создание нового курса. Реализовала основные этапы работы:</p>
+      <ul class="list"><li><p>просмотр списка курсов и их статусов</p></li><li><p>настройку параметров курса</p></li><li><p>создание структуры из пяти уровней</p></li><li><p>добавление учебного контента</p></li><li><p>настройку системы оценивания по 100-балльной шкале</p></li></ul>
+      <p class="cell-text primary">Так первая версия объединила полный цикл создания курса в одном сервисе и заложила основу для дальнейшего развития конструктора.</p>
+
+    </section>
+    <div style="grid-column:span 12">
+    <div class="carousel" style="position:relative;border-radius:24px;overflow:hidden;margin:12px auto;width:calc(100% - 24px);outline:12px solid #252525;outline-offset:0">
+      <div style="position:relative">
+      <div class="carousel-track" style="display:flex;transition:transform .4s ease">
+        <img class="zoomable" src="assets/case-konstruktor-bank.png" alt="Таблица со списком курсов" data-cap="Таблица со списком курсов" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-konstruktor-params.png" alt="Форма заполнения параметров курса" data-cap="Форма заполнения параметров курса" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-konstruktor-content.png" alt="Страница заполнения содержания курса" data-cap="Страница заполнения содержания курса" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-konstruktor-scale.png" alt="Страница выставления баллов для практических занятий" data-cap="Страница выставления баллов для практических занятий" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+      </div>
+      <button onclick="carGo(this,-1)" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8249;</button>
+      <button onclick="carGo(this,1)" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8250;</button>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 0 0">
+      <span class="car-cap" style="font-size:14px;color:var(--ink)">Таблица со списком курсов</span>
+      <span style="display:flex;gap:6px">
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.9"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+      </span>
+      </div>
+    </div>
     <section class="cell s12" id="iteraciya-2-gibkost-i-ad">
       <span class="cell-kicker">Итерация 2. гибкость и адаптация под процессы разных подразделений</span>
-      <p class="cell-text primary sub-head">Исследование</p>
       <p class="cell-text primary">После релиза MVP провела юзабилити-тестирование с методистами бизнес-школы и ДПО. Пригласила участников первой встречи: они собирали курсы в новом сервисе на собственных материалах.</p>
       <p class="cell-text primary">Во время работы наблюдала, где интерфейс расходится с привычным процессом и какие операции приходится выполнять лишний раз.</p>
       <p class="cell-text primary">Основные инсайты:</p>
@@ -124,7 +150,11 @@
     </section>
     <section class="cell s12" id="gipotezy">
       <span class="cell-kicker">Гипотезы</span>
-      <ul class="list"><li><p>Если разрешить создавать сразу несколько элементов структуры, методисты смогут сначала набросать разделы и подразделы, а затем вернуться к наполнению.</p></li><li><p>Если дать возможность переименовывать уровни и сохранять шаблоны, школы смогут адаптировать конструктор под свою терминологию и повторно использовать удачные структуры.</p></li><li><p>Если показывать ошибки по мере заполнения и разделять критичные и некритичные, методисты заранее поймут, что может помешать публикации.</p></li></ul>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 Если разрешить создавать сразу несколько элементов структуры, методисты смогут сначала набросать разделы и подразделы, а затем вернуться к наполнению.</div>
+        <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 Если дать возможность переименовывать уровни и сохранять шаблоны, школы смогут адаптировать конструктор под свою терминологию и повторно использовать удачные структуры.</div>
+        <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 Если показывать ошибки по мере заполнения и разделять критичные и некритичные, методисты заранее поймут, что может помешать публикации.</div>
+      </div>
 
     </section>
     <section class="cell s12" id="reshenie-i-rezultat-2">
@@ -134,21 +164,44 @@
       <ul class="list"><li><p>Добавление нескольких элементов за раз. Методисты могут сначала создать основу структуры, а затем последовательно наполнить её контентом.</p></li><li><p>Настройка структуры под школу. Добавила переименование уровней и сохранение шаблонов, чтобы методисты могли использовать привычную терминологию и повторно применять готовые структуры.</p></li><li><p>Проверка готовности к публикации. Ошибки стали отображаться уже во время заполнения, критичные проблемы, блокирующие публикацию, выделяются отдельно.</p></li><li><p>Доработка элементов управления. Пересмотрела расположение кнопок добавления, закрепила нужные действия и убрала лишние, чтобы сократить поиск по интерфейсу.</p></li></ul>
 
     </section>
+
+    <div style="grid-column:span 12">
+    <div class="carousel" style="position:relative;border-radius:24px;overflow:hidden;margin:12px auto;width:calc(100% - 24px);outline:12px solid #252525;outline-offset:0">
+      <div style="position:relative">
+      <div class="carousel-track" style="display:flex;transition:transform .4s ease">
+        <img class="zoomable" src="assets/case-konstruktor-iteration2-bulk-add.png" alt="Пакетное добавление элементов" data-cap="Пакетное добавление элементов" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-konstruktor-iteration2-structure.png" alt="Добавление занятия и управление структурой" data-cap="Добавление занятия и управление структурой" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-konstruktor-iteration2-publication-errors.png" alt="Проверка готовности курса к публикации" data-cap="Проверка готовности курса к публикации" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-konstruktor-iteration2-template.png" alt="Настройка и сохранение шаблона структуры" data-cap="Настройка и сохранение шаблона структуры" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+      </div>
+      <button onclick="carGo(this,-1)" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8249;</button>
+      <button onclick="carGo(this,1)" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8250;</button>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 0 0">
+      <span class="car-cap" style="font-size:14px;color:var(--ink)">Пакетное добавление элементов</span>
+      <span style="display:flex;gap:6px">
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.9"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+      </span>
+    </div>
+    </div>
     <section class="cell s12" id="validaciya-2">
       <span class="cell-kicker">Валидация</span>
-      <p class="cell-text primary">Обратная связь подтвердила гипотезы о пакетном создании элементов и адаптации терминологии: новые сценарии соответствовали тому, как методисты привыкли собирать курсы.</p>
-      <p class="cell-text primary">Гипотезу о проверке ошибок пришлось уточнить. Методистам было недостаточно просто видеть список проблем: им важно понимать, какие ошибки действительно блокируют сохранение, а какие ошибки касаются именно публикации курса.</p>
+      <p class="cell-text primary">Обратная связь подтвердила, что методистам удобно добавлять сразу несколько элементов и работать с понятными им названиями разделов.</p>
+      <p class="cell-text primary">Также выяснилось, что важно разделять ошибки: одни мешают сохранить курс, другие не дают его опубликовать. Поэтому я доработала проверку ошибок, чтобы методист сразу понимал, что именно нужно исправить и что мешает ему перейти к следующему шагу.</p>
 
     </section>
     <section class="cell s12" id="chto-ne-voshlo-v-razrabo">
       <span class="cell-kicker">Что не вошло в разработку</span>
-      <p class="cell-text primary">Отдельно спроектировала перенос элемента из одного раздела в другой. В процессе проработки стало понятно, что нужно различать два сценария: перемещение соседних элементов и полноценный перенос между разделами. У каждого были свои логические нюансы.</p>
-      <p class="cell-text primary">Из-за сжатых сроков и сложности реализации функцию не включили в эту итерацию.</p>
+      <p class="cell-text primary">Ещё проработала перенос элементов между разделами. В процессе стало понятно, что здесь два разных сценария: переместить элемент рядом с другим внутри раздела или перенести его в совершенно другой раздел. Для каждого нужно было продумать свою логику.</p>
+      <p class="cell-text primary">Из-за сроков и сложности реализации решили отложить эту функцию и не включать её в текущую итерацию.</p>
 
     </section>
     <section class="cell s12" id="iteraciya-3-podderzhka-s">
       <span class="cell-kicker">Итерация 3. поддержка сценариев высшего образования</span>
-      <p class="cell-text primary sub-head">Исследование</p>
       <p class="cell-text primary">Постепенно конструктор начал использоваться для задач высшего образования. Чтобы разобраться с потребностями этой аудитории, созвонилась с методистом, которая переносила в сервис большие курсы для ВО.</p>
       <p class="cell-text primary">Встреча длилась 40–60 минут. Методист демонстрировала процесс переноса курса ВО, а я наблюдала, как она работает с крупной структурой и какими операциями пользуется.</p>
       <p class="cell-text primary">Основные инсайты:</p>
@@ -157,7 +210,11 @@
     </section>
     <section class="cell s12" id="gipotezy-2">
       <span class="cell-kicker">Гипотезы</span>
-      <ul class="list"><li><p>Если добавить массовую настройку доступности для группы элементов, перенос больших курсов станет быстрее и потребует меньше ручных действий.</p></li><li><p>Если дать возможность сворачивать и разворачивать структуру, методистам будет проще переключаться между общим обзором большого курса и работой с отдельными элементами.</p></li><li><p>Если добавить предпросмотр курса глазами студента, методисты смогут заранее оценивать навигацию и содержание и замечать недочёты до публикации.</p></li></ul>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 Если добавить массовую настройку доступности для группы элементов, перенос больших курсов станет быстрее и потребует меньше ручных действий.</div>
+        <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 Если дать возможность сворачивать и разворачивать структуру, методистам будет проще переключаться между общим обзором большого курса и работой с отдельными элементами.</div>
+        <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 Если добавить предпросмотр курса глазами студента, методисты смогут заранее оценивать навигацию и содержание и замечать недочёты до публикации.</div>
+      </div>
 
     </section>
     <section class="cell s12" id="reshenie-i-rezultat-3">
@@ -168,13 +225,41 @@
     </section>
     <section class="cell s12" id="validaciya-3">
       <span class="cell-kicker">Валидация</span>
-      <p class="cell-text primary">Гипотезы о массовой настройке доступности и сворачивании структуры подтвердились на работе с большими курсами. Методисту больше не нужно выставлять доступность каждому элементу вручную. Структуру из десятков разделов она может свернуть для общего обзора и раскрывать только нужные блоки.</p>
-      <p class="cell-text primary">Гипотеза о предпросмотре тоже подтвердилась, но с уточнением: при проверке курса глазами студента методистам важнее не просто увидеть всю структуру целиком, а оценить переходы между разделами и доступность материалов занятий.</p>
+      <p class="cell-text primary">Гипотезы о массовой настройке доступности и сворачивании структуры подтвердились. Методисты могут настроить доступность сразу для всех разделов, а не менять её у каждого элемента отдельно. В больших курсах можно свернуть всю структуру, чтобы быстро увидеть её целиком, и раскрыть только нужные разделы.</p>
+      <p class="cell-text primary">Предпросмотр курса тоже хорошо себя показал. Методисты активно им пользуются, чтобы посмотреть на курс глазами студента, проверить структуру, переходы между разделами и доступность учебных материалов до публикации.</p>
 
     </section>
+    <div style="grid-column:span 12">
+    <div class="carousel" style="position:relative;border-radius:24px;overflow:hidden;margin:12px auto;width:calc(100% - 24px);outline:12px solid #252525;outline-offset:0">
+      <div style="position:relative">
+      <div class="carousel-track" style="display:flex;transition:transform .4s ease">
+        <img class="zoomable" src="assets/case-konstruktor-iteration3-activity-type.png" alt="Выбор типа активности" data-cap="Выбор типа активности" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-konstruktor-iteration3-start-modal.png" alt="Добавлена возможность создавать четыре типа курсов" data-cap="Добавлена возможность создавать четыре типа курсов" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-konstruktor-iteration3-file-upload.png" alt="Оформление итогового мероприятия" data-cap="Оформление итогового мероприятия" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+        <img class="zoomable" src="assets/case-konstruktor-iteration3-note-view.png" alt="Предпросмотр курса глазами студента с переключением между форматами" data-cap="Предпросмотр курса глазами студента с переключением между форматами" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
+      </div>
+      <button onclick="carGo(this,-1)" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8249;</button>
+      <button onclick="carGo(this,1)" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8250;</button>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 0 0">
+      <span class="car-cap" style="font-size:14px;color:var(--ink)">Выбор типа активности</span>
+      <span style="display:flex;gap:6px">
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.9"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
+      </span>
+    </div>
+    </div>
     <section class="cell s12" id="itog">
       <span class="cell-kicker">Итог</span>
-      <p class="cell-text primary">На текущий момент конструктор объединяет работу методистов из 31 подразделения. За время работы сервиса в нём создано 1 875 курсов, из которых 1 375 уже опубликованы. Это 73,3% от общего числа созданных курсов.</p>
+      <div class="nums" style="grid-template-columns:repeat(4,1fr)">
+        <div class="num"><div class="v">1 875</div><div class="k">курсов создано в конструкторе</div></div>
+        <div class="num"><div class="v">1 375</div><div class="k">курсов опубликовано</div></div>
+        <div class="num"><div class="v">31</div><div class="k">подразделение использует сервис</div></div>
+        <div class="num"><div class="v">73,3%</div><div class="k">созданных курсов дошли до публикации</div></div>
+      </div>
       <p class="cell-text primary">За три итерации конструктор прошёл путь от базового инструмента для создания и публикации курсов до полноценного сервиса, который поддерживает разные образовательные сценарии и работу с крупными структурами.</p>
       <p class="cell-text primary">Сегодня методисты могут собирать курсы в одном месте, адаптировать структуру под процессы своей школы, повторно использовать шаблоны, видеть ошибки до публикации и проверять будущий курс глазами студента.</p>
 
@@ -228,5 +313,21 @@
   </main>
 </div>
 <script src="app.js?v8"></script>
+<script>
+function carGo(btn, dir) {
+  var root = btn.closest(".carousel");
+  var wrap = root.parentElement;
+  var track = root.querySelector(".carousel-track");
+  var slides = track.children.length;
+  var idx = parseInt(root.dataset.idx || "0");
+  idx = Math.min(Math.max(idx + dir, 0), slides - 1);
+  root.dataset.idx = idx;
+  track.style.transform = "translateX(-" + idx * 100 + "%)";
+  wrap.querySelectorAll(".car-dot").forEach(function (d, i) { d.style.opacity = i === idx ? ".9" : ".35"; });
+  var cap = wrap.querySelector(".car-cap");
+  if (cap) cap.textContent = track.children[idx].getAttribute("data-cap") || "";
+}
+</script>
+
 </body>
 </html>
