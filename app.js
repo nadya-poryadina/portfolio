@@ -74,6 +74,55 @@
   });
 })();
 
+// Мобильное меню: бургер + шторка с навигацией
+(function () {
+  var nav = document.querySelector('.side-nav');
+  if (!nav) return;
+  var side = nav.closest('.side');
+
+  var btn = document.createElement('button');
+  btn.className = 'burger';
+  btn.setAttribute('aria-label', 'Открыть меню разделов');
+  btn.innerHTML = '<span></span><span></span>';
+
+  var backdrop = document.createElement('div');
+  backdrop.className = 'nav-backdrop';
+
+  var drawer = document.createElement('aside');
+  drawer.className = 'nav-drawer';
+  drawer.setAttribute('aria-label', 'Разделы');
+  if (side) {
+    var logo = side.querySelector('.logo');
+    if (logo) drawer.appendChild(logo.cloneNode(true));
+  }
+  var drawerNav = document.createElement('nav');
+  drawerNav.className = 'side-nav';
+  drawerNav.innerHTML = nav.innerHTML;
+  drawer.appendChild(drawerNav);
+
+  document.body.appendChild(btn);
+  document.body.appendChild(backdrop);
+  document.body.appendChild(drawer);
+
+  var mq = window.matchMedia('(max-width: 900px)');
+
+  function toggle(open) {
+    drawer.classList.toggle('open', open);
+    btn.classList.toggle('open', open);
+    backdrop.classList.toggle('show', open);
+    btn.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню разделов');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  btn.addEventListener('click', function () { toggle(!drawer.classList.contains('open')); });
+  backdrop.addEventListener('click', function () { toggle(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') toggle(false); });
+  drawerNav.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { toggle(false); });
+  });
+  mq.addEventListener('change', function (e) { if (!e.matches) toggle(false); });
+})();
+
 // Подсветка активного раздела в навигации кейса (scroll-spy)
 (function () {
   var links = document.querySelectorAll('.side-nav a[href^="#"]');

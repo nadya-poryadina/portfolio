@@ -183,6 +183,15 @@ a { color: inherit; }
 /* фото-плитка */
 .photos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
 .photos img { border-radius: 12px; aspect-ratio: 1; object-fit: cover; width: 100%; }
+@media (max-width: 900px) {
+  .photos {
+    display: flex; gap: 8px;
+    overflow-x: auto; scroll-snap-type: x mandatory;
+    padding-bottom: 4px; scrollbar-width: none;
+  }
+  .photos::-webkit-scrollbar { display: none; }
+  .photos img { flex: 0 0 62%; aspect-ratio: 1; scroll-snap-align: center; }
+}
 
 /* отзывы */
 .review { gap: 10px; }
@@ -255,14 +264,55 @@ a { color: inherit; }
 /* ---------- адаптив ---------- */
 @media (max-width: 1200px) {
   .layout { padding: 20px 40px; gap: 24px; grid-template-columns: 300px 1fr; }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
   .photos { grid-template-columns: repeat(3, 1fr); }
   .photos img:nth-child(n+4) { display: none; }
 }
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; padding: 16px 40px; gap: 16px; }
-  .side { position: static; }
+  /* главная: профиль виден сверху, навигация уходит в бургер */
+  .side { position: static; height: auto; }
+  .side:has(.side-photo) .side-nav { display: none; }
+  /* кейс-страницы: сайдбар целиком в шторку */
+  .side:not(:has(.side-photo)) { display: none; }
   .s3, .s4, .s5, .s6, .s7, .s8 { grid-column: span 12; }
-  .nums { grid-template-columns: repeat(2, 1fr); }
+  .nums { grid-template-columns: repeat(2, 1fr) !important; }
+  .nav-drawer {
+    position: fixed; top: 0; left: 0; bottom: 0;
+    width: min(84vw, 320px); z-index: 60;
+    background: var(--card);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 24px; overflow-y: auto;
+    transform: translateX(-105%);
+    transition: transform .3s ease;
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .nav-drawer.open { transform: none; box-shadow: 0 0 60px rgba(0,0,0,.25); }
+  .nav-drawer .side-nav { margin-top: 0; }
+}
+.burger { display: none; }
+.nav-backdrop { display: none; }
+@media (max-width: 900px) {
+  .burger {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+    position: fixed; top: 14px; right: 14px; z-index: 70;
+    width: 46px; height: 46px; border: none; border-radius: 50%;
+    background: var(--ink); cursor: pointer;
+    box-shadow: var(--shadow-lift);
+  }
+  .burger span { display: block; width: 18px; height: 2px; background: #fff; border-radius: 2px; transition: transform .25s; }
+  .burger.open span:nth-child(1) { transform: translateY(3.5px) rotate(45deg); }
+  .burger.open span:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
+  .nav-backdrop {
+    display: block; position: fixed; inset: 0; z-index: 55;
+    background: rgba(20,20,25,.45);
+    opacity: 0; pointer-events: none; transition: opacity .3s;
+  }
+  .nav-backdrop.show { opacity: 1; pointer-events: auto; }
+}
+@media (max-width: 700px) {
+  .slider .slider-card { flex-basis: 100%; }
 }
 @media (max-width: 560px) {
   .proj-top { height: 200px; }
@@ -273,6 +323,8 @@ a { color: inherit; }
   .proj-top.mockup { padding: 18px 18px 0; }
   .photos { grid-template-columns: repeat(2, 1fr); }
   .step { grid-template-columns: 1fr; }
+  .nums { grid-template-columns: 1fr !important; }
+  .h1 { font-size: 26px; }
 }
 
 .cell-text.primary { color: var(--primary); }
@@ -381,6 +433,18 @@ a { color: inherit; }
 .job-sub { text-transform: uppercase; letter-spacing: .08em; font-size: var(--text-xs); color: var(--ink-3); margin-bottom: 10px; }
 .job-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 @media (max-width: 900px) { .job-cols { grid-template-columns: 1fr; } }
+
+/* Отзывы: 3 колонки на десктопе, свайп-слайдер на мобилке */
+.reviews { grid-column: span 12; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+@media (max-width: 900px) {
+  .reviews {
+    display: flex; gap: 12px;
+    overflow-x: auto; scroll-snap-type: x mandatory;
+    padding-bottom: 4px; scrollbar-width: none;
+  }
+  .reviews::-webkit-scrollbar { display: none; }
+  .reviews .review { flex: 0 0 86%; scroll-snap-align: center; }
+}
 
 /* Timeline: опыт и образование */
 .t-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
