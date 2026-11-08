@@ -278,7 +278,7 @@ a { color: inherit; }
   .side:not(:has(.side-photo)) { display: none; }
   .s3, .s4, .s5, .s6, .s7, .s8 { grid-column: span 12; }
   .nums { grid-template-columns: repeat(2, 1fr) !important; }
-  .nav-drawer {
+  aside.nav-drawer {
     position: fixed; top: 0; left: 0; bottom: 0;
     width: min(84vw, 320px); z-index: 60;
     background: var(--card);
@@ -288,11 +288,12 @@ a { color: inherit; }
     transition: transform .3s ease;
     display: flex; flex-direction: column; gap: 20px;
   }
-  .nav-drawer.open { transform: none; box-shadow: 0 0 60px rgba(0,0,0,.25); }
-  .nav-drawer .side-nav { margin-top: 0; }
+  aside.nav-drawer.open { transform: none; box-shadow: 0 0 60px rgba(0,0,0,.25); }
+  aside.nav-drawer .side-nav { margin-top: 0; }
 }
 .burger { display: none; }
 .nav-backdrop { display: none; }
+.nav-drawer { display: none; }
 @media (max-width: 900px) {
   .burger {
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
