@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v46">
+  <link rel="stylesheet" href="styles.css?v50">
   <style>
     #body{display:contents}
     .list p{color:var(--ink)}
@@ -31,23 +31,19 @@
       <a href="#iteraciya-1-mvp-bazovy-s">Итерация 1. MVP: базовый сценарий обучения</a>
       <a href="#gipotezy">Гипотезы</a>
       <a href="#reshenie">Решение</a>
-      <a href="#posle-zapuska">После запуска</a>
-      <a href="#rezultat-iteracii">Результат итерации</a>
+      <a href="#rezultat-iteracii">Результат</a>
       <a href="#iteraciya-2-detalny-prog">Итерация 2. детальный прогресс по оцениваемым занятиям</a>
       <a href="#gipotezy-2">Гипотезы</a>
       <a href="#reshenie-2">Решение</a>
-      <a href="#posle-zapuska-2">После запуска</a>
-      <a href="#rezultat-iteracii-2">Результат итерации</a>
-      <a href="#iteraciya-3-samostoyatel">Итерация 3. самостоятельное исправление ответов и редизайн дисциплины</a>
+      <a href="#rezultat-iteracii-2">Результат</a>
+      <a href="#iteraciya-3-samostoyatel">Итерация 3. самостоятельное исправление ответов, сервис консультаций и редизайн дисциплины</a>
       <a href="#gipotezy-3">Гипотезы</a>
       <a href="#reshenie-3">Решение</a>
-      <a href="#chto-izmenilos">Что изменилось</a>
-      <a href="#rezultat-iteracii-3">Результат итерации</a>
+      <a href="#rezultat-iteracii-3">Результат</a>
       <a href="#iteraciya-4-adaptaciya-p">Итерация 4. адаптация платформы для высшего образования</a>
       <a href="#gipotezy-4">Гипотезы</a>
       <a href="#reshenie-4">Решение</a>
-      <a href="#chto-izmenilos-2">Что изменилось</a>
-      <a href="#rezultat-iteracii-4">Результат итерации</a>
+      <a href="#rezultat-iteracii-4">Результат</a>
       <a href="#itog-ke-sa">Итог кейса</a>
       <a href="#refleksiya">Рефлексия</a>
     </nav>
@@ -90,18 +86,33 @@
       <p class="cell-text primary">Спроектировала основные уровни обучения:</p>
       <ul class="list"><li><p>Список дисциплин. Карточки с прогрессом и статусами, чтобы студент мог оценить состояние каждой дисциплины, не открывая её.</p></li><li><p>Страница дисциплины. Иерархия разделов, подразделов и тем, внутри которых размещены материалы занятий.</p></li><li><p>Страница занятия. Изучение материалов и переход к оцениваемым заданиям и тестам.</p></li><li><p>Результаты. После проверки задания или теста студент видит результат и доступные дальнейшие действия.</p></li></ul>
     </section>
-    <section class="cell s12" id="posle-zapuska">
-      <span class="cell-kicker">После запуска</span>
-      <p class="cell-text primary">Появился единый маршрут обучения: студент мог перейти от списка дисциплин к конкретному занятию, изучить материал, выполнить задание или тест и вернуться к результату в рамках одной платформы.</p>
-      <p class="cell-text primary">По обратной связи от кураторов и из групповых чатов: студенты ДПО проходили короткие программы без регулярных обращений с вопросами о том, где найти следующий материал и что делать дальше.</p>
-    </section>
     <section class="cell s12" id="rezultat-iteracii">
-      <span class="cell-kicker">Результат итерации</span>
-      <p class="cell-text primary">Вместо разрозненных экранов и отдельных учебных материалов появился целостный сценарий обучения. MVP заложил структуру, которую в следующих итерациях удалось расширять без пересборки базовой логики.</p>
+      <span class="cell-kicker">Результат</span>
+      <p class="cell-text primary">Появился единый флоу обучения: студент может перейти от списка дисциплин к конкретному занятию, изучить материал, выполнить задание или тест и вернуться к результату.</p>
+      <p class="cell-text primary">По ОС от кураторов и в групповых чатах студенты ДПО проходили короткие программы без регулярных вопросов о том, где найти следующий материал и что делать дальше. MVP заложил основу, которую в следующих итерациях можно было расширять без пересборки базовой логики.</p>
     </section>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-subjects.png" alt="Список дисциплин" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Список дисциплин</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-subject-content.png" alt="Просмотр дисциплины: содержание" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Просмотр дисциплины: содержание</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-lecture-text.png" alt="Лекция: текст" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Лекция: текст</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-lecture-video.png" alt="Лекция: видео" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Лекция: видео</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-assignment.png" alt="Задание" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Задание</div>
+    </div>
     <section class="cell s12" id="iteraciya-2-detalny-prog">
       <span class="cell-kicker">Итерация 2. детальный прогресс по оцениваемым занятиям</span>
-      <p class="cell-text primary sub-head">Задача</p>
       <p class="cell-text primary">По мере развития платформы в курсах стало больше оцениваемых занятий: заданий и тестов, за которые начисляются баллы. Студенту стало важно понимать не только общий прогресс по дисциплине, но и сколько конкретных заданий и тестов уже выполнено, а сколько ещё осталось.</p>
     </section>
     <section class="cell s12" id="gipotezy-2">
@@ -114,18 +125,18 @@
       <ul class="list"><li><p>каждое задание и тест отображаются отдельным элементом;</p></li><li><p>у каждого элемента есть собственный статус;</p></li><li><p>при наведении появляется подсказка с информацией о занятии.</p></li></ul>
       <p class="cell-text primary">Ограничение: если в дисциплине было больше 40 оцениваемых занятий, детальный прогресс заменялся стандартной шкалой. Это помогало не перегружать экран, но ограничивало детализацию. Позже проблема стала одним из оснований для доработки в четвёртой итерации.</p>
     </section>
-    <section class="cell s12" id="posle-zapuska-2">
-      <span class="cell-kicker">После запуска</span>
-      <p class="cell-text primary">Прогресс стал отвечать на конкретный вопрос студента: какие оцениваемые занятия уже пройдены, а какие ещё предстоит выполнить. Для этого больше не нужно было открывать каждое занятие и проверять его статус отдельно.</p>
-      <p class="cell-text primary">По обратной связи от кураторов стало меньше обращений с вопросом «что мне ещё осталось сделать?». Статусы корректно отображались и после повторного прохождения заданий, поэтому в чатах не возникало жалоб на пропавшие или некорректно учтённые занятия.</p>
-    </section>
     <section class="cell s12" id="rezultat-iteracii-2">
-      <span class="cell-kicker">Результат итерации</span>
-      <p class="cell-text primary">В платформе появился инструмент контроля выполнения оцениваемых занятий. При этом обнаружилось ограничение: детальный прогресс плохо масштабировался на большие дисциплины. Это стало одной из задач следующего этапа развития.</p>
+      <span class="cell-kicker">Результат</span>
+      <p class="cell-text primary">Прогресс стал отвечать на главный вопрос студента: какие оцениваемые занятия уже пройдены, а какие ещё нужно выполнить. Больше не нужно было открывать каждое занятие и проверять его статус отдельно.</p>
+      <p class="cell-text primary">По обратной связи кураторов стало меньше вопросов «что мне ещё осталось сделать?». Статусы корректно обновлялись и после повторного прохождения заданий, поэтому жалоб на пропавшие или неправильно учтённые занятия в чатах не возникало.</p>
+      <p class="cell-text primary">В платформе появился инструмент контроля оцениваемых занятий. При этом детальный прогресс плохо масштабировался на большие дисциплины — это стало одной из задач следующего этапа развития.</p>
     </section>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-progress-bar.png" alt="Просмотр дисциплины: прогресс-бар по практическим занятиям" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Просмотр дисциплины: прогресс-бар по практическим занятиям</div>
+    </div>
     <section class="cell s12" id="iteraciya-3-samostoyatel">
-      <span class="cell-kicker">Итерация 3. самостоятельное исправление ответов и редизайн дисциплины</span>
-      <p class="cell-text primary sub-head">Проблема и задачи</p>
+      <span class="cell-kicker">Итерация 3. самостоятельное исправление ответов, сервис консультаций и редизайн дисциплины</span>
       <p class="cell-text primary">Если у студента возникал вопрос по обучению, он обращался к своему куратору, который передавал вопрос преподавателю. Ответ также возвращался через куратора. Из-за дополнительных звеньев коммуникация затягивалась, а некоторые вопросы оставались без ответа. Это мешало студентам своевременно разбираться в учебном материале и продолжать обучение.</p>
       <p class="cell-text primary">После отправки ответа студент не мог самостоятельно внести исправления. Даже если замечал ошибку или понимал, что забыл что-то добавить, ему приходилось ждать проверки, чтобы получить возможность пересдать работу. Это замедляло обучение и приводило к обращениям к преподавателям с просьбами вернуть задание на доработку.</p>
       <p class="cell-text primary">Параллельно экран дисциплины нужно было адаптировать под новый визуальный стиль платформы в рамках общего редизайна.</p>
@@ -136,20 +147,32 @@
     </section>
     <section class="cell s12" id="reshenie-3">
       <span class="cell-kicker">Решение</span>
-      <ul class="list"><li><p>Самостоятельное исправление ответов. Добавила возможность изменить отправленный ответ до того, как преподаватель приступил к проверке.</p></li><li><p>Редизайн страницы дисциплины. Обновила визуальный стиль, сохранив прежнюю структуру и логику навигации.</p></li></ul>
-    </section>
-    <section class="cell s12" id="chto-izmenilos">
-      <span class="cell-kicker">Что изменилось</span>
-      <p class="cell-text primary">Студенты получили возможность самостоятельно исправлять отправленные ответы, пока преподаватель ещё не начал проверку. Для этого больше не требовалось отдельно обращаться к преподавателю и ждать, пока задание вернут на доработку.</p>
-      <p class="cell-text primary">После обновления визуального стиля пользователи продолжили работать с привычной структурой страницы дисциплины. В обратной связи не было заметного всплеска вопросов о том, где искать материалы и как перемещаться между разделами.</p>
+      <ul class="list"><li><p>Самостоятельное исправление ответов. Добавила возможность изменить отправленный ответ до того, как преподаватель приступил к проверке.</p></li><li><p>Спроектировала сервис консультаций, где студент может напрямую задать вопрос преподавателю.</p></li><li><p>Редизайн страницы дисциплины. Обновила визуальный стиль, сохранив прежнюю структуру и логику навигации.</p></li></ul>
     </section>
     <section class="cell s12" id="rezultat-iteracii-3">
-      <span class="cell-kicker">Результат итерации</span>
-      <p class="cell-text primary">Сократился лишний шаг между обнаружением ошибки и её исправлением: студент получил больше самостоятельности в работе с заданиями. Одновременно обновился интерфейс дисциплины без изменения привычной логики навигации.</p>
+      <span class="cell-kicker">Результат</span>
+      <p class="cell-text primary">Студенты получили возможность самостоятельно исправлять отправленные ответы, пока преподаватель ещё не начал проверку. Для этого больше не нужно было обращаться к преподавателю и ждать, пока задание вернут на доработку.</p>
+      <p class="cell-text primary">Также спроектировала сервис консультаций, где студент может напрямую задать вопрос преподавателю.</p>
+      <p class="cell-text primary">После обновления визуального стиля пользователи продолжили работать с привычной структурой страницы дисциплины. В обратной связи не было заметного роста вопросов о том, где искать материалы и как перемещаться между разделами. Сократился лишний шаг между обнаружением ошибки и её исправлением: студент стал более самостоятельным в работе с заданиями. При этом интерфейс дисциплины обновился без изменения привычной логики навигации.</p>
     </section>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-consultation-button.png" alt="Просмотр дисциплины: кнопка запроса консультации" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Просмотр дисциплины: кнопка запроса консультации</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-consultation-new.png" alt="Новая консультация" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Новая консультация</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-consultations-list.png" alt="Список консультаций студента" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Список консультаций студента</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-answer-edit.png" alt="Редактирование ответа по заданию" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Редактирование ответа по заданию</div>
+    </div>
     <section class="cell s12" id="iteraciya-4-adaptaciya-p">
       <span class="cell-kicker">Итерация 4. адаптация платформы для высшего образования</span>
-      <p class="cell-text primary sub-head">Проблема</p>
       <p class="cell-text primary">Платформу начали расширять на высшее образование. Существующие сценарии нужно было адаптировать под более сложную организацию учебного процесса: семестры, зачёты, экзамены, пересдачи и несколько преподавателей на одной дисциплине.</p>
       <p class="cell-text primary">Я проанализировала текущий интерфейс и выделила пять проблемных зон:</p>
       <ul class="list"><li><p>Семестровая система. Студенту нужно понимать, какие семестры доступны, какие дисциплины относятся к текущему этапу обучения и где есть задолженности. Прежний список дисциплин не давал такого обзора.</p></li><li><p>Расписание итоговых мероприятий. Даты и время зачётов и экзаменов не были представлены в контексте обучения, хотя студентам важно заранее планировать подготовку.</p></li><li><p>Несколько преподавателей. Одну дисциплину в вузе могут вести несколько преподавателей, но существующий интерфейс был рассчитан на одного.</p></li><li><p>Прогресс в больших дисциплинах. В предыдущей итерации детальный прогресс заменялся стандартной шкалой, если количество занятий превышало 40. Для дисциплин высшего образования этого ограничения стало недостаточно: студентам по-прежнему нужна была детализация.</p></li><li><p>Итоговые мероприятия и пересдачи. Завершение дисциплины зависит от результатов итогового контроля. Студенту важно видеть, где требуется пересдача, и понимать, какие дисциплины ещё не закрыты.</p></li></ul>
@@ -162,17 +185,31 @@
       <span class="cell-kicker">Решение</span>
       <ul class="list"><li><p>Навигация по семестрам. Добавила переключение между семестрами. Доступные семестры отображаются как активные вкладки, недоступные отмечены иконкой замка. Для семестров с пересдачами предусмотрены отдельные обозначения.</p></li><li><p>Расписание итоговых мероприятий. Добавила блок «Расписание зачётов и экзаменов» с переходом к расписанию. Он отображается, только если в выбранном семестре есть итоговые мероприятия.</p></li><li><p>Несколько преподавателей. Добавила блок преподавателей на странице дисциплины: студент видит всех специалистов и может открыть информацию о каждом.</p></li><li><p>Детальный прогресс. Добавила кнопку «Детальный прогресс», по которой открывается боковая панель со статусами всех практических занятий. Основная шкала остаётся компактной, а подробная информация доступна независимо от количества занятий.</p></li><li><p>Пересдачи. Добавила статус «Пересдача» для дисциплин и визуальные обозначения семестров, в которых есть такие дисциплины.</p></li></ul>
     </section>
-    <section class="cell s12" id="chto-izmenilos-2">
-      <span class="cell-kicker">Что изменилось</span>
-      <p class="cell-text primary">Платформа стала поддерживать сценарии, которых не было в первой версии: студент получил возможность переключаться между семестрами, находить информацию об итоговых мероприятиях, видеть преподавателей дисциплины и отдельно проверять статусы всех практических занятий.</p>
-      <p class="cell-text primary">Детальный прогресс больше не зависел от количества занятий: даже в больших дисциплинах студент мог открыть боковую панель и посмотреть состояние каждого задания.</p>
-      <p class="cell-text primary">По обратной связи из чатов стало заметно, что вопросы «какой сейчас семестр?» и «где моя пересдача?» практически перестали возникать.</p>
-    </section>
     <section class="cell s12" id="rezultat-iteracii-4">
-      <span class="cell-kicker">Результат итерации</span>
+      <span class="cell-kicker">Результат</span>
       <p class="cell-text primary">Платформа адаптировалась под длительный университетский цикл. Вместо простого списка дисциплин студент получил представление о своём обучении в разрезе семестров, итоговых мероприятий, преподавателей и пересдач.</p>
       <p class="cell-text primary">Отдельно удалось решить проблему масштабирования прогресса: теперь общая картина остаётся компактной, а подробные статусы доступны независимо от размера дисциплины.</p>
     </section>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-wo-subjects.png" alt="Список дисциплин для ВО: разделение по семестрам, расписание экзаменов, разные типы дисциплин" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Список дисциплин для ВО: разделение по семестрам, расписание экзаменов, разные типы дисциплин</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-wo-subject.png" alt="Просмотр дисциплины: несколько преподавателей, итоговое мероприятие, доработка прогресс-бара" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Просмотр дисциплины: несколько преподавателей, итоговое мероприятие, доработка прогресс-бара</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-wo-progress.png" alt="Просмотр детального прогресса" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Просмотр детального прогресса</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-wo-practice.png" alt="Просмотр практики" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Просмотр практики</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-obuchenie-wo-coursework.png" alt="Курсовая работа" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Курсовая работа</div>
+    </div>
     <section class="cell s12" id="itog-ke-sa">
       <span class="cell-kicker">Итог кейса</span>
       <p class="cell-text primary">За четыре итерации платформа прошла путь от MVP для коротких программ ДПО до системы, которая поддерживает более сложный университетский цикл: семестры, итоговые мероприятия, пересдачи, нескольких преподавателей и детальный прогресс в больших дисциплинах.</p>
@@ -216,7 +253,7 @@
           <div class="sl-body">
             <div class="proj-meta" style="position:static;opacity:1"><span class="tag">EdTech</span><span class="tag">B2C</span></div>
             <h3 class="cell-title">Расписание университета</h3>
-            <p class="proj-desc">100 тыс+ пользователей, −70% обращений, 12 000 переходов в онлайн-занятия.</p>
+            <p class="proj-desc">100 тыс+ пользователей в месяц, −70% обращений, 12 000 переходов в онлайн-занятия.</p>
           </div>
         </a>
         <a class="slider-card" href="case-ai-spend.html">

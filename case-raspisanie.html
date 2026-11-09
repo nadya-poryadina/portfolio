@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v46">
+  <link rel="stylesheet" href="styles.css?v50">
   <style>
     #body{display:contents}
     .list p{color:var(--ink)}
@@ -53,9 +53,9 @@
     <section class="cell s12" id="start">
       <h1 class="h1">Расписание университета</h1>
       <div class="nums" style="grid-template-columns:repeat(3,1fr);margin-top:8px">
-        <div class="num"><div class="v">100 тыс+</div><div class="k">пользователей</div></div>
-        <div class="num"><div class="v">−70%</div><div class="k">обращений в поддержку по теме расписания</div></div>
-        <div class="num"><div class="v">12 000</div><div class="k">переходят из расписания в онлайн-занятия</div></div>
+        <div class="num"><div class="v">100 тыс+</div><div class="k">пользователей в месяц</div></div>
+        <div class="num"><div class="v">−70%</div><div class="k">обращений в поддержку по теме расписания в месяц</div></div>
+        <div class="num"><div class="v">12 000</div><div class="k">переходят из расписания в онлайн-занятия в месяц</div></div>
       </div>
     </section>
     <div id="body">
@@ -98,23 +98,12 @@
       <p class="cell-text primary">После запуска я продолжила собирать обратную связь через поддержку, кураторов и чаты. Студенты стали делиться скриншотами расписания из личного кабинета вместо пересылки таблиц. Блок «Расписание на сегодня» стал частым способом открыть расписание. Также перестали встречаться повторные жалобы на сливающиеся карточки занятий.</p>
     </section>
     <div style="grid-column:span 12">
-    <div class="carousel" style="position:relative;border-radius:24px;overflow:hidden;margin:12px auto;width:calc(100% - 24px);outline:12px solid #252525;outline-offset:0">
-      <div style="position:relative">
-      <div class="carousel-track" style="display:flex;transition:transform .4s ease">
-        <img class="zoomable" src="assets/case-raspisanie-day-view.png" alt="Дневной режим отображения. Справа названия на сегодня и календарь" data-cap="Дневной режим отображения. Справа названия на сегодня и календарь" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
-        <img class="zoomable" src="assets/case-raspisanie-week-view.png" alt="Недельный режим отображения и информация по занятию" data-cap="Недельный режим отображения и информация по занятию" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
-      </div>
-      <button onclick="carGo(this,-1)" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8249;</button>
-      <button onclick="carGo(this,1)" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8250;</button>
-      </div>
+      <img class="zoomable" src="assets/case-raspisanie-day-view.png" alt="Дневной режим отображения. Справа названия на сегодня и календарь" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Дневной режим отображения. Справа названия на сегодня и календарь</div>
     </div>
-    <div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 0 0">
-      <span class="car-cap" style="font-size:14px;color:var(--ink)">Дневной режим отображения. Справа названия на сегодня и календарь</span>
-      <span style="display:flex;gap:6px">
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.9"></span>
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
-      </span>
-    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-raspisanie-week-view.png" alt="Недельный режим отображения и информация по занятию" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Недельный режим отображения и информация по занятию</div>
     </div>
     <section class="cell s12" id="iteraciya-2-ob-edinit-ra">
       <span class="cell-kicker">Итерация 2. объединить расписания нескольких групп и добавить преподавателей</span>
@@ -145,27 +134,20 @@
       <p class="cell-text primary">При проектировании общей сетки отдельно продумала отображение занятий из разных групп, которые проходят одновременно. Нужно было показать все занятия так, чтобы карточки не сливались и оставались читаемыми.</p>
     </section>
     <div style="grid-column:span 12">
-    <div class="carousel" style="position:relative;border-radius:24px;overflow:hidden;margin:12px auto;width:calc(100% - 24px);outline:12px solid #252525;outline-offset:0">
-      <div style="position:relative">
-      <div class="carousel-track" style="display:flex;transition:transform .4s ease">
-        <img class="zoomable" src="assets/case-raspisanie-day-student.png" alt="Просмотр студентом расписания по нескольким группам" data-cap="Просмотр студентом расписания по нескольким группам" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
-        <img class="zoomable" src="assets/case-raspisanie-day-student-lesson.png" alt="Просмотр информации по онлайн занятию" data-cap="Просмотр информации по онлайн занятию" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
-        <img class="zoomable" src="assets/case-raspisanie-week-teacher.png" alt="Расписание преподавателя. Подсветка возможных накладок занятий." data-cap="Расписание преподавателя. Подсветка возможных накладок занятий." style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
-        <img class="zoomable" src="assets/case-raspisanie-multi-groups.png" alt="Функция поиска свободного времени" data-cap="Функция поиска свободного времени" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
-      </div>
-      <button onclick="carGo(this,-1)" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8249;</button>
-      <button onclick="carGo(this,1)" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8250;</button>
-      </div>
+      <img class="zoomable" src="assets/case-raspisanie-day-student.png" alt="Просмотр студентом расписания по нескольким группам" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Просмотр студентом расписания по нескольким группам</div>
     </div>
-    <div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 0 0">
-      <span class="car-cap" style="font-size:14px;color:var(--ink)">Просмотр студентом расписания по нескольким группам</span>
-      <span style="display:flex;gap:6px">
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.9"></span>
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
-      </span>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-raspisanie-day-student-lesson.png" alt="Просмотр информации по онлайн занятию" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Просмотр информации по онлайн занятию</div>
     </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-raspisanie-week-teacher.png" alt="Расписание преподавателя. Подсветка возможных накладок занятий." style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Расписание преподавателя. Подсветка возможных накладок занятий.</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-raspisanie-multi-groups.png" alt="Функция поиска свободного времени" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Функция поиска свободного времени</div>
     </div>
     <section class="cell s12" id="chto-izmenilos-2">
       <span class="cell-kicker">Что изменилось</span>
@@ -195,34 +177,27 @@
       <p class="cell-text primary">После запуска я продолжила собирать обратную связь через поддержку и чаты, а также смотреть статистику использования. Вопросы о том, где найти ссылку на вебинар, практически перестали появляться. Количество скачиваний Excel растёт в начале каждого семестра. Также больше не встречались жалобы на то, что названия дисциплин сложно прочитать.</p>
     </section>
     <div style="grid-column:span 12">
-    <div class="carousel" style="position:relative;border-radius:24px;overflow:hidden;margin:12px auto;width:calc(100% - 24px);outline:12px solid #252525;outline-offset:0">
-      <div style="position:relative">
-      <div class="carousel-track" style="display:flex;transition:transform .4s ease">
-        <img class="zoomable" src="assets/case-raspisanie-week-teacher-export.png" alt="Расписание" data-cap="Расписание" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
-        <img class="zoomable" src="assets/case-raspisanie-webinar-recording.png" alt="Просмотр записи вебинаров" data-cap="Просмотр записи вебинаров" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
-        <img class="zoomable" src="assets/case-raspisanie-download.png" alt="Скачивание расписания" data-cap="Скачивание расписания" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
-        <img class="zoomable" src="assets/case-raspisanie-color-picking.png" alt="Подбор цвета по занятиям" data-cap="Подбор цвета по занятиям" style="cursor:zoom-in;width:100%;flex:0 0 100%;display:block">
-      </div>
-      <button onclick="carGo(this,-1)" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8249;</button>
-      <button onclick="carGo(this,1)" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8250;</button>
-      </div>
+      <img class="zoomable" src="assets/case-raspisanie-week-teacher-export.png" alt="Расписание" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Расписание</div>
     </div>
-    <div style="display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 0 0">
-      <span class="car-cap" style="font-size:14px;color:var(--ink)">Расписание</span>
-      <span style="display:flex;gap:6px">
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.9"></span>
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#252525;opacity:.35"></span>
-      </span>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-raspisanie-webinar-recording.png" alt="Просмотр записи вебинаров" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Просмотр записи вебинаров</div>
     </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-raspisanie-download.png" alt="Скачивание расписания" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Скачивание расписания</div>
+    </div>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-raspisanie-color-picking.png" alt="Подбор цвета по занятиям" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Подбор цвета по занятиям</div>
     </div>
     <section class="cell s12" id="itog">
       <span class="cell-kicker">Итог</span>
       <div class="nums" style="grid-template-columns:repeat(3,1fr)">
-        <div class="num"><div class="v">100 тыс+</div><div class="k">пользователей работают с расписанием</div></div>
-        <div class="num"><div class="v">−70%</div><div class="k">обращений в поддержку по вопросам расписания</div></div>
-        <div class="num"><div class="v">12 000</div><div class="k">переходов из расписания в онлайн-занятия</div></div>
+        <div class="num"><div class="v">100 тыс+</div><div class="k">пользователей работают с расписанием в месяц</div></div>
+        <div class="num"><div class="v">−70%</div><div class="k">обращений в поддержку по вопросам расписания в месяц</div></div>
+        <div class="num"><div class="v">12 000</div><div class="k">переходов из расписания в онлайн-занятия в месяц</div></div>
       </div>
       <p class="cell-text primary">За три итерации расписание выросло из инструмента для просмотра занятий одной группы в единый сервис для студентов и преподавателей.</p>
       <p class="cell-text primary">Студенты получили возможность планировать неделю сразу по нескольким группам, искать нужные занятия и свободные окна. Преподаватели могут работать со своим расписанием и расписанием групп. Позже в расписании появились ссылки на онлайн-занятия и записи, а также возможность выгружать расписание в Excel.</p>
@@ -276,20 +251,5 @@
   </main>
 </div>
 <script src="app.js?v10"></script>
-<script>
-function carGo(btn, dir) {
-  var root = btn.closest(".carousel");
-  var wrap = root.parentElement;
-  var track = root.querySelector(".carousel-track");
-  var slides = track.children.length;
-  var idx = parseInt(root.dataset.idx || "0");
-  idx = Math.min(Math.max(idx + dir, 0), slides - 1);
-  root.dataset.idx = idx;
-  track.style.transform = "translateX(-" + idx * 100 + "%)";
-  wrap.querySelectorAll(".car-dot").forEach(function (d, i) { d.style.opacity = i === idx ? ".9" : ".35"; });
-  var cap = wrap.querySelector(".car-cap");
-  if (cap) cap.textContent = track.children[idx].getAttribute("data-cap") || "";
-}
-</script>
 </body>
 </html>
