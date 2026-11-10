@@ -75,6 +75,27 @@ a { color: inherit; }
 .proj-metrics { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 12px; }
 .proj-metrics .v { font-size: 20px; line-height: 1.1; letter-spacing: -.01em; color: var(--primary); font-weight: 500; }
 .proj-metrics .k { font-size: var(--text-xs); color: var(--ink-3); line-height: 1.35; margin-top: 3px; }
+
+/* Горизонтальные карточки кейсов (v2): на мобилке — старые вертикальные */
+.proj-old { display: none; }
+.cell.proj-old { display: none; }
+.cell.proj-h { display: flex; flex-direction: row; gap: 22px; align-items: stretch; }
+.proj-h-cover { flex: 0 0 315px; border-radius: var(--radius-in); overflow: hidden; display: flex; align-self: center; position: relative; }
+.proj-h-cover img { width: 100%; height: auto; object-fit: contain; }
+.proj-h-cover .tags { position: absolute; top: 12px; left: 12px; z-index: 2; gap: 6px; }
+.proj-h-cover .tag { background: var(--card); box-shadow: 0 2px 8px rgba(60,60,60,.12); }
+.proj-h-body { flex: 1; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.proj-h-meta { font-size: var(--text-s); color: var(--ink-2); }
+.proj-h-meta .sep { color: var(--ink-3); padding: 0 4px; }
+.proj-h-field { font-size: var(--text-s); color: var(--ink-2); }
+.proj-h-field b { color: var(--ink); font-weight: 500; }
+.proj-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 12px; }
+.mtag { background: var(--ink); color: #fff; font-size: var(--text-xs); padding: 6px 12px; border-radius: 999px; white-space: nowrap; }
+.mtag b { font-weight: 500; }
+@media (max-width: 800px) {
+  .cell.proj-h { display: none; }
+  .cell.proj-old { display: flex; flex-direction: column; }
+}
 .tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag {
   font-size: var(--text-xs); color: var(--ink-2);

@@ -137,8 +137,9 @@
   if (!ids.length) return;
 
   function activate(id) {
-    links.forEach(function (l) { l.classList.remove('nav-active'); });
-    if (map[id]) map[id].link.classList.add('nav-active');
+    links.forEach(function (l) {
+      l.classList.toggle('nav-active', l.getAttribute('href') === '#' + id);
+    });
   }
 
   var visible = {};

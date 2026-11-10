@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v50">
+  <link rel="stylesheet" href="styles.css?v59">
   <style>
   .cell-kicker{font-size:24px;line-height:1.2;color:var(--ink);text-transform:none;letter-spacing:normal;font-weight:500}     .list p{font-size:16px;color:var(--ink)}
     .sub-head{font-weight:500;color:var(--ink);margin-top:8px}
@@ -213,12 +213,12 @@
       <p class="cell-text primary">После исследования я пересмотрела изначальную гипотезу, что главная ценность продукта в создании заявки через AI-чат.</p>
       <p class="cell-text primary">Интервью не подтвердили, что именно заполнение формы является главным источником трудностей. При этом обнаружились другие точки приложения усилий: подготовка информации, работа с документами, проверка допустимости расходов и обработка заявок.</p>
       <p class="cell-text primary">Я выделила несколько направлений для проектирования:</p>
-      <ul class="list">
-        <li><p><b>Подготовка заявки:</b> распознавание чеков, извлечение данных и предварительное заполнение полей.</p></li>
-        <li><p><b>Проверка расходов:</b> поиск отсутствующих документов, несоответствий и возможных нарушений внутренних правил.</p></li>
-        <li><p><b>Работа с исключениями:</b> объяснение причин замечаний и передача спорных ситуаций на рассмотрение ответственному сотруднику.</p></li>
-        <li><p><b>Контроль процесса:</b> отображение текущего статуса, истории изменений и следующих действий.</p></li>
-      </ul>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 <b>Подготовка заявки:</b> распознавание чеков, извлечение данных и предварительное заполнение полей.</div>
+        <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 <b>Проверка расходов:</b> поиск отсутствующих документов, несоответствий и возможных нарушений внутренних правил.</div>
+        <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 <b>Работа с исключениями:</b> объяснение причин замечаний и передача спорных ситуаций на рассмотрение ответственному сотруднику.</div>
+        <div style="background:var(--bg);border-radius:var(--radius-in);padding:14px 16px;font-size:16px;color:var(--ink)">💡 <b>Контроль процесса:</b> отображение текущего статуса, истории изменений и следующих действий.</div>
+      </div>
       <p class="cell-text primary">Отдельно заложила правило: неоднозначные решения AI не принимает сам. Если система находит превышение лимита или данных не хватает для проверки, она объясняет причину и передаёт вопрос ответственному человеку.</p>
     </section>
 
@@ -371,7 +371,7 @@
       </div>
       <div class="slider" id="casesSlider">
         <a class="slider-card" href="case-oplata.html">
-          <div class="sl-cover"><img src="assets/case-oplata-graphic.png" alt="Оплата обучения"></div>
+          <div class="sl-cover"><img src="assets/case-oplata-cover.png" alt="Оплата обучения"></div>
           <div class="sl-body">
             <div class="proj-meta" style="position:static;opacity:1"><span class="tag">EdTech</span><span class="tag">Fintech</span></div>
             <h3 class="cell-title">Оплата обучения</h3>
@@ -414,6 +414,6 @@
 
 </div>
 
-<script src="app.js?v10"></script>
+<script src="app.js?v11"></script>
 </body>
 </html>
