@@ -89,9 +89,10 @@ a { color: inherit; }
 .proj-h-meta .sep { color: var(--ink-3); padding: 0 4px; }
 .proj-h-field { font-size: var(--text-s); color: var(--ink-2); }
 .proj-h-field b { color: var(--ink); font-weight: 500; }
-.proj-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 12px; }
-.mtag { background: var(--ink); color: #fff; font-size: var(--text-xs); padding: 6px 12px; border-radius: 999px; white-space: nowrap; }
-.mtag b { font-weight: 500; }
+.proj-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: auto; padding-top: 12px; font-size: var(--text-s); color: var(--ink-2); }
+.mtag { background: none; color: var(--ink-2); font-size: var(--text-s); padding: 0; border-radius: 0; white-space: normal; }
+.mtag b { color: var(--primary); font-weight: 500; }
+.mtag + .mtag::before { content: ''; display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: var(--ink-3); margin-right: 10px; vertical-align: middle; }
 @media (max-width: 800px) {
   .cell.proj-h { display: none; }
   .cell.proj-old { display: flex; flex-direction: column; }

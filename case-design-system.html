@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дизайн-система — кейс · Надя Порядина</title>
+  <meta name="description" content="Кейс: дизайн-система от локального UI-kit до 200+ компонентов в двух продуктах.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v61">
+  <style>
+    #body{display:contents}
+    .cell-kicker{font-size:24px;line-height:1.2;color:var(--ink);text-transform:none;letter-spacing:normal;font-weight:500}
+    .list p{font-size:16px;color:var(--ink)}
+    .sub-head{font-weight:500;color:var(--ink);margin-top:8px}
+    @media (max-width:640px){ .nums{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="side">
+    <a class="logo" href="index.html" aria-label="На главную">
+      <span class="logo-mark">Н</span>
+      <span>nadya<em>.po</em></span>
+    </a>
+    <nav class="side-nav" aria-label="Разделы кейса">
+      <a href="#about">О проекте</a>
+      <a href="#team">Команда</a>
+      <a href="#task">Задача</a>
+      <a href="#architecture">Архитектура и структура</a>
+      <a href="#docs">Документация компонентов</a>
+      <a href="#sync">Синхронизация с разработкой</a>
+      <a href="#growth">Развитие и масштабирование</a>
+      <a href="#result">Результат</a>
+      <a href="#business">Что это дало бизнесу</a>
+    </nav>
+  </aside>
+  <main class="bento">
+    <div class="page-top">
+      <a class="back" href="index.html">← Главная</a>
+      <span class="crumb">Кейс · Синергия · Product Design · Design Systems</span>
+    </div>
+    <section class="cell s12" id="start">
+      <h1 class="h1">Дизайн-система: от локального UI-kit к общей системе</h1>
+      <div class="nums" style="grid-template-columns:repeat(3,1fr);margin-top:8px">
+        <div class="num"><div class="v">4 года</div><div class="k">развития библиотеки</div></div>
+        <div class="num"><div class="v">200+</div><div class="k">компонентов и элементов</div></div>
+        <div class="num"><div class="v">2</div><div class="k">продукта на единой системе</div></div>
+      </div>
+    </section>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-design-system-cover.png" alt="Дизайн-система — обложка кейса" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+    </div>
+    <div id="body">
+    <section class="cell s12" id="about">
+      <span class="cell-kicker">О проекте</span>
+      <p class="cell-text primary">Когда я присоединилась к проекту, в компании ещё не было полноценной дизайн-системы. Существовал небольшой локальный UI-kit с ограниченным набором компонентов, который не покрывал потребности развивающихся продуктов.</p>
+      <p class="cell-text primary">За четыре года библиотека выросла в полноценную дизайн-систему, которая используется в двух продуктах: личном кабинете студента и LMS-платформе. Она объединила общие визуальные принципы, компоненты, состояния и правила их использования, став основой для проектирования и разработки интерфейсов.</p>
+    </section>
+    <section class="cell s12" id="team">
+      <span class="cell-kicker">Команда</span>
+      <p class="cell-text primary">На старте над дизайн-системой работали два продуктовых дизайнера. По мере развития библиотеки команда расширилась до четырёх человек: ещё два дизайнера подключились к поддержке и дальнейшему развитию компонентов.</p>
+    </section>
+    <section class="cell s12" id="task">
+      <span class="cell-kicker">Задача</span>
+      <p class="cell-text primary">Создать масштабируемую дизайн-систему, которая позволит:</p>
+      <ul class="list">
+        <li><p>Обеспечить единый визуальный язык для двух продуктов.</p></li>
+        <li><p>Сократить дублирование компонентов и решений.</p></li>
+        <li><p>Упростить проектирование новых интерфейсов.</p></li>
+        <li><p>Синхронизировать подходы дизайнеров и разработчиков.</p></li>
+        <li><p>Обеспечить возможность дальнейшего развития продуктов без постоянного создания элементов с нуля.</p></li>
+      </ul>
+    </section>
+    <section class="cell s12" id="architecture">
+      <span class="cell-kicker">Архитектура и структура</span>
+      <p class="cell-text primary">Работа началась с формирования общей структуры библиотеки и принципов организации компонентов. Постепенно дизайн-система разделилась на несколько уровней.</p>
+      <p class="cell-text primary sub-head">Foundations</p>
+      <p class="cell-text primary">Базовые визуальные основы системы:</p>
+      <ul class="list">
+        <li><p>Цветовая палитра и семантические токены.</p></li>
+        <li><p>Типографика.</p></li>
+        <li><p>Иконки.</p></li>
+        <li><p>Базовые стили и визуальные параметры.</p></li>
+      </ul>
+      <p class="cell-text primary sub-head">Variants &amp; States</p>
+      <p class="cell-text primary">Для компонентов прорабатывались варианты использования, размеры и состояния: default, hover, focus, active, disabled, error и другие. Это позволило описать поведение элементов в разных сценариях и обеспечить согласованность интерфейсов.</p>
+      <img class="zoomable" src="assets/case-design-system-states.png" alt="Состояния компонента: default, hover, focus, active, disabled, error" style="cursor:zoom-in;width:100%;height:auto;display:block;border-radius:16px;margin-top:4px">
+    </section>
+    <section class="cell s12" id="docs">
+      <span class="cell-kicker">Документация компонентов</span>
+      <p class="cell-text primary">Важной частью развития системы стала документация. Для компонентов описывались:</p>
+      <ul class="list">
+        <li><p>Назначение и правила использования.</p></li>
+        <li><p>Анатомия и составные элементы.</p></li>
+        <li><p>Доступные варианты и состояния.</p></li>
+        <li><p>Особенности адаптивности.</p></li>
+        <li><p>Спецификации и рекомендации для разработки.</p></li>
+      </ul>
+      <p class="cell-text primary">Документация помогла сформировать единые правила работы с библиотекой и снизить вероятность разночтений при реализации интерфейсов.</p>
+      <img class="zoomable" src="assets/case-design-system-docs.png" alt="Описание работы с компонентом в документации" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+    </section>
+    <section class="cell s12" id="sync">
+      <span class="cell-kicker">Синхронизация с разработкой</span>
+      <p class="cell-text primary">Дизайн-система развивалась не только в Figma. Компоненты были перенесены в код и представлены в Storybook, где разработчики могут просматривать их варианты и состояния.</p>
+      <p class="cell-text primary">Таким образом, Figma-библиотека и Storybook стали общей точкой опоры для дизайнеров и разработчиков, помогая поддерживать соответствие между макетами и реализацией.</p>
+    </section>
+    <section class="cell s12" id="growth">
+      <span class="cell-kicker">Развитие и масштабирование</span>
+      <p class="cell-text primary">По мере развития продуктов библиотека регулярно пополнялась новыми компонентами и дорабатывалась с учётом возникающих задач.</p>
+      <p class="cell-text primary">Архитектура и общие принципы организации системы формировались и последовательно уточнялись в процессе работы. При этом решения по компонентам учитывали потребности сразу двух продуктов, а также возможность повторного использования элементов в других командах.</p>
+      <p class="cell-text primary">Другие подразделения компании также могут использовать библиотеку по запросу.</p>
+    </section>
+    <section class="cell s12" id="result">
+      <span class="cell-kicker">Результат</span>
+      <p class="cell-text primary">За четыре года небольшой UI-kit превратился в общую дизайн-систему, которая используется в двух продуктах и поддерживается командой дизайнеров.</p>
+      <p class="cell-text primary">Основные результаты:</p>
+      <ul class="list">
+        <li><p><b>200+ компонентов и элементов</b> в общей библиотеке.</p></li>
+        <li><p><b>2 продукта</b>, использующих единую систему компонентов и визуальных принципов.</p></li>
+        <li><p><b>Figma + Storybook</b> как инструменты для совместной работы дизайнеров и разработчиков.</p></li>
+        <li><p><b>Единые правила и документация</b>, упрощающие использование и поддержку компонентов.</p></li>
+        <li><p><b>Сокращение времени работы:</b> по оценке команды, использование готовых компонентов позволило примерно в два раза ускорить проектирование вайрфреймов и разработку интерфейсов.</p></li>
+      </ul>
+      <p class="cell-text primary">В результате дизайн-система стала не просто набором UI-компонентов, а общей основой для проектирования, разработки и дальнейшего масштабирования продуктов.</p>
+    </section>
+    <section class="cell s12" id="business">
+      <span class="cell-kicker">Что это дало бизнесу</span>
+      <ul class="list">
+        <li><p><b>Быстрая адаптация новых команд.</b> Стандартизированные интерфейсы и документация сокращают время на погружение в проект и помогают быстрее включаться в работу.</p></li>
+        <li><p><b>Единый визуальный язык.</b> Общие компоненты и правила обеспечивают целостный пользовательский опыт и узнаваемость бренда во всех продуктах.</p></li>
+        <li><p><b>Рост операционной эффективности.</b> Готовые решения сокращают время на согласования и повторную проработку интерфейсов, ускоряя запуск новых функций.</p></li>
+        <li><p><b>Снижение затрат на разработку.</b> Повторное использование компонентов уменьшает объём работ по дизайну и фронтенд-разработке, сокращая время на макеты, вёрстку и исправления.</p></li>
+        <li><p><b>Ускорение создания графики с помощью AI.</b> Внедрили AI для генерации иллюстраций и иконок, сократив время на подготовку визуальных материалов без потери единого стиля.</p></li>
+        <li><p><b>Сохранение целостности бренда.</b> Основывались на брендбуке и адаптировали проверенные решения из UI-библиотек под задачи и визуальный язык продуктов.</p></li>
+      </ul>
+    </section>
+    </div>
+      <section class="cell s12">
+      <div class="slider-head">
+        <span class="cell-kicker">Другие кейсы</span>
+        <div class="slider-nav">
+          <button type="button" data-dir="-1" aria-label="Назад">‹</button>
+          <button type="button" data-dir="1" aria-label="Вперёд">›</button>
+        </div>
+      </div>
+      <div class="slider" id="casesSlider">
+        <a class="slider-card" href="case-obuchenie.html">
+          <div class="sl-cover"><img src="assets/case-obuchenie-cover.png" alt="Обучение в LMS"></div>
+          <div class="sl-body">
+            <div class="proj-meta" style="position:static;opacity:1"><span class="tag">EdTech</span></div>
+            <h3 class="cell-title">Обучение в LMS</h3>
+            <p class="proj-desc">100 тыс+ студентов, −45% обращений к кураторам, −60% возвратов на доработку.</p>
+          </div>
+        </a>
+        <a class="slider-card" href="case-oplata.html">
+          <div class="sl-cover"><img src="assets/case-oplata-cover.png" alt="Оплата обучения"></div>
+          <div class="sl-body">
+            <div class="proj-meta" style="position:static;opacity:1"><span class="tag">EdTech</span><span class="tag">Fintech</span></div>
+            <h3 class="cell-title">Оплата обучения</h3>
+            <p class="proj-desc">Сервис «Мои финансы»: 83% платежей через сервис, тикеты −47%, медиана 4,5 мин.</p>
+          </div>
+        </a>
+        <a class="slider-card" href="case-raspisanie.html">
+          <div class="sl-cover"><img src="assets/case-raspisanie-cover.png" alt="Расписание университета"></div>
+          <div class="sl-body">
+            <div class="proj-meta" style="position:static;opacity:1"><span class="tag">EdTech</span><span class="tag">B2C</span></div>
+            <h3 class="cell-title">Расписание университета</h3>
+            <p class="proj-desc">100 тыс+ пользователей в месяц, −70% обращений, 12 000 переходов в онлайн-занятия.</p>
+          </div>
+        </a>
+        <a class="slider-card" href="case-konstruktor.html">
+          <div class="sl-cover"><img src="assets/case-konstruktor-cover.png" alt="Конструктор курсов в LMS"></div>
+          <div class="sl-body">
+            <div class="proj-meta" style="position:static;opacity:1"><span class="tag">EdTech</span><span class="tag">B2B</span></div>
+            <h3 class="cell-title">Конструктор курсов в LMS</h3>
+            <p class="proj-desc">1875 курсов создано, 31 подразделение, 73,3% доходят до публикации.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="app.js?v11"></script>
+</body>
+</html>
