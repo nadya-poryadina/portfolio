@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v61">
+  <link rel="stylesheet" href="styles.css?v65">
   <style>
   .cell-kicker{font-size:24px;line-height:1.2;color:var(--ink);text-transform:none;letter-spacing:normal;font-weight:500}     .list p{font-size:16px;color:var(--ink)}
     .sub-head{font-weight:500;color:var(--ink);margin-top:8px}
@@ -65,13 +65,20 @@
       <h1 class="h1">AI-платформа для управления расходами</h1>
     </section>
 
-    <section class="cell s12" id="context">
+    <div class="ctx-row">
+    <section class="cell" id="context">
       <span class="cell-kicker">Контекст</span>
       <p class="cell-text primary">Сотрудники регулярно тратят свои деньги на рабочие задачи: покупают инструменты, оплачивают подписки, бронируют билеты и жильё в командировках. Чтобы получить возмещение, нужно собрать подтверждающие документы, оформить заявку и пройти внутреннее согласование.</p>
       <p class="cell-text primary">Процесс зависит от правил конкретной компании и обычно вовлекает нескольких человек: сотрудник собирает чеки и заполняет данные о расходе, менеджер проверяет обоснованность трат, а финансовая команда сверяет документы и суммы с внутренними регламентами.</p>
       <p class="cell-text primary">Часть процесса живёт в специализированных системах, а часть остаётся за их пределами: в переписках, письмах и устных договорённостях.</p>
       <p class="cell-text primary"><b>Моя задача</b> была разобраться в существующих сценариях и спроектировать единый опыт для всех участников процесса, отдав AI рутинные операции.</p>
     </section>
+    <aside class="cell">
+      <div class="ctx-ci"><span>Роль</span><b>Продуктовый дизайнер</b></div>
+      <div class="ctx-ci"><span>Команда</span><b>Продакт</b></div>
+      <div class="ctx-ci"><span>Сроки</span><b>2026</b></div>
+    </aside>
+    </div>
 
     <section class="cell s12" id="problem">
       <span class="cell-kicker">Проблема</span>
@@ -336,8 +343,18 @@
       <p class="cell-text primary">Вместо ручного заполнения всех полей пользователь может загрузить чек, а AI автоматически распознает его и извлечёт основные данные: дату, сумму, валюту, продавца и другие доступные сведения. На основе распознанной информации система предварительно заполняет форму заявки. Пользователю остаётся проверить данные и при необходимости внести исправления.</p>
     </section>
     <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-ai-spend-request-create-2.png" alt="Создание заявки: проверка распознанных данных" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Проверка распознанных данных перед отправкой</div>
+    </div>
+
+    <div style="grid-column:span 12">
       <img class="zoomable" src="assets/case-ai-spend-request-create.png" alt="Создание заявки: распознавание чека и заполнение полей" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
       <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Распознавание чека и предзаполнение заявки</div>
+    </div>
+
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-ai-spend-request-create-3.png" alt="Создание заявки: заполненная форма" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Заявка с распознанными данными</div>
     </div>
 
     <section class="cell s12" id="auto-check">

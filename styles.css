@@ -517,6 +517,14 @@ a { color: inherit; }
 /* dribbble: квадратная кнопка с иконкой */
 .btn-dribbble { width: 44px; padding: 10px 0; flex: none; }
 .btn-dribbble img { display: block; }
+/* Контекст + карточка роль/команда/сроки в одном ряду */
+.ctx-row { grid-column: span 12; display: grid; grid-template-columns: 1fr 320px; gap: 12px; align-items: stretch; }
+.ctx-row > .cell { grid-column: auto; }
+.ctx-ci { display: flex; flex-direction: column; gap: 2px; }
+.ctx-ci span { font-size: var(--text-xs); color: var(--ink-3); letter-spacing: .06em; text-transform: uppercase; }
+.ctx-ci b { font-size: var(--text-m); color: var(--ink); font-weight: 500; line-height: 1.4; }
+@media (max-width: 900px) { .ctx-row { grid-template-columns: 1fr; } }
+
 .side-nav a.nav-active { color: var(--ink); font-weight: 500; position: relative; }
 .side-nav a.nav-active::before { content: ''; position: absolute; left: -14px; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; border-radius: 50%; background: var(--ink); }
 .proj-top.mockup img { margin-bottom: 0; }

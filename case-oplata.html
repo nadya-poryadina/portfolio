@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v61">
+  <link rel="stylesheet" href="styles.css?v65">
   <style>
     .problem-headline{font-size:32px;line-height:1.25;color:var(--ink);font-weight:500;margin:4px 0 8px}
     .problem-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
@@ -57,18 +57,25 @@
       <h1 class="h1">Оплата обучения</h1>
       <div class="nums" style="grid-template-columns:repeat(3,1fr);margin-top:8px">
         <div class="num"><div class="v">83%</div><div class="k">платежей через сервис</div></div>
-        <div class="num"><div class="v">−47%</div><div class="k">ручной обработки</div></div>
+        <div class="num"><div class="v">−47%</div><div class="k">обращений в поддержку</div></div>
         <div class="num"><div class="v">4,5 мин</div><div class="k">медианное время оплаты</div></div>
       </div>
     </section>
     <div id="body">
     <img class="zoomable" src="assets/case-oplata-graphic.png" alt="Появился график платежей — экран сервиса" style="grid-column:span 12;cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
-    <section class="cell s12" id="kontekst">
+    <div class="ctx-row">
+    <section class="cell" id="kontekst">
       <span class="cell-kicker">Контекст</span>
       <p class="cell-text primary">Сервис проектировался с нуля. До появления сервиса студенты оплачивали обучение вне личного кабинета: через переписку в мессенджерах со своим куратором.</p>
       <p class="cell-text primary">В пиковый период поступления, с июля по октябрь, финансовые процессы затрагивали от 6 до 10 тысяч пользователей.</p>
       <p class="cell-text primary">Моя роль: продуктовый дизайнер end-to-end. От исследования пользовательских потребностей и проектирования сценариев до проверки решений и передачи макетов в разработку.</p>
     </section>
+    <aside class="cell">
+      <div class="ctx-ci"><span>Роль</span><b>Продуктовый дизайнер</b></div>
+      <div class="ctx-ci"><span>Команда</span><b>Аналитик, продакт, разработка</b></div>
+      <div class="ctx-ci"><span>Сроки</span><b>2025</b></div>
+    </aside>
+    </div>
     <section class="cell s12" id="problema">
       <span class="cell-kicker">Проблема</span>
       <h2 class="problem-headline" style="font-size:16px">💡 Оплата обучения зависела от ручной работы кураторов</h2>
@@ -519,14 +526,14 @@
       </ul>
       <div class="nums" style="grid-template-columns:repeat(3,1fr)">
         <div class="num"><div class="v">83%</div><div class="k">доля платежей через сервис</div></div>
-        <div class="num"><div class="v">−47%</div><div class="k">ручной обработки</div></div>
+        <div class="num"><div class="v">−47%</div><div class="k">обращений в поддержку</div></div>
         <div class="num"><div class="v">4,5 мин</div><div class="k">медианное время оплаты</div></div>
       </div>
     </section>
     <section class="cell s12" id="itog-ke-sa">
       <span class="cell-kicker">Итог кейса</span>
       <p class="cell-text primary">Платёжный процесс переехал из переписки с кураторами в личный кабинет. Теперь студент может самостоятельно посмотреть счёт, оплатить обучение удобным способом, проверить статус платежа и историю операций в одном месте.</p>
-      <p class="cell-text primary">Доля платежей через сервис достигла 83%, количество обращений по вопросам оплаты в техподдержку снизилось на 47%, а медианное время оплаты составило 4,5 минуты.</p>
+      <p class="cell-text primary">Доля платежей через сервис достигла <b>83%</b>, количество тикетов по вопросам оплаты снизилось на <b>47%</b>, а медианное время оплаты составило <b>4,5 минуты</b>. Откуда цифры: доля платежей — продуктовая аналитика (платежи через сервис от всех платежей за обучение); тикеты — статистика техподдержки за периоды до и после запуска; время оплаты — события в личном кабинете: от открытия счёта до статуса «Оплачено».</p>
       <p class="cell-text primary">Кураторам и финансовым консультантам больше не приходится вручную отвечать на типовые вопросы о суммах, статусах и подтверждении платежей. Студенты получили самостоятельный доступ к финансовой информации, а сотрудники смогли сократить время на рутинные операции.</p>
       <p class="cell-text primary">Кошелёк стал частью финансового сервиса. Студенты получили возможность пополнять лицевой счёт заранее, хранить средства и использовать их для оплаты обучения. История операций позволяет отслеживать движение денег, включая пополнения и списания.</p>
     </section>

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v61">
+  <link rel="stylesheet" href="styles.css?v65">
   <style>
     #body{display:contents}
     .list p{color:var(--ink)}
@@ -44,6 +44,7 @@
       <a href="#gipotezy-2">Гипотезы</a>
       <a href="#validaciya-3">Валидация</a>
       <a href="#reshenie-i-rezultat-3">Решение и результат</a>
+      <a href="#usability">Юзабилити-тестирование конструктора курсов</a>
       <a href="#itog">Итог</a>
     </nav>
   </aside>
@@ -63,11 +64,18 @@
 
     </section>
     <div id="body">
-    <section class="cell s12" id="kontekst">
+    <div class="ctx-row">
+    <section class="cell" id="kontekst">
       <span class="cell-kicker">Контекст</span>
       <p class="cell-text primary">Конструктор курсов — внутренний сервис, в котором методисты собирают образовательные курсы из готовых материалов: банков вопросов, тестов и других учебных элементов.</p>
 
     </section>
+    <aside class="cell">
+      <div class="ctx-ci"><span>Роль</span><b>Продуктовый дизайнер</b></div>
+      <div class="ctx-ci"><span>Команда</span><b>Аналитик, продакт, разработка</b></div>
+      <div class="ctx-ci"><span>Сроки</span><b>2022 — 2026</b></div>
+    </aside>
+    </div>
     <section class="cell s12" id="problema">
       <span class="cell-kicker">Итерация 1. MVP: базовый сценарий создания курса</span>
       <p class="cell-text primary">Когда я подключилась к проекту, единого инструмента для сборки курсов не было. Одни методисты работали в Moodle, другие вели структуру в Excel, а материалы хранили на Google Дисках и Яндекс Дисках. У каждой школы был свой процесс, поэтому организация обучения зависела от подразделения и используемых инструментов.</p>
@@ -239,6 +247,20 @@
       <img class="zoomable" src="assets/case-konstruktor-iteration3-note-view.png" alt="Предпросмотр курса глазами студента с переключением между форматами" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
       <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Предпросмотр курса глазами студента с переключением между форматами</div>
     </div>
+    <section class="cell s12" id="usability">
+      <span class="cell-kicker">Юзабилити-тестирование конструктора курсов</span>
+      <p class="cell-text primary sub-head">Задание</p>
+      <p class="cell-text primary">Пяти респондентам предложили создать новый курс: заполнить основные параметры, добавить в содержание три занятия разных типов (лекцию, тест и задание), а затем распределить между ними 100 баллов.</p>
+      <p class="cell-text primary sub-head">Результат</p>
+      <p class="cell-text primary">Все 5 участников успешно выполнили задание. Медианное время создания курса составило <b>3 минуты 25 секунд</b>. Неуспешных попыток не было.</p>
+      <p class="cell-text primary sub-head">Вывод</p>
+      <p class="cell-text primary">Все участники смогли самостоятельно пройти основной сценарий создания курса, включая настройку его параметров, добавление занятий и распределение баллов. Результаты подтвердили, что базовая логика конструктора позволяет выполнить задачу без помощи модератора. При этом дальнейшее развитие интерфейса можно сфокусировать на сокращении времени выполнения и устранении затруднений, выявленных в ходе тестирования.</p>
+    </section>
+    <div style="grid-column:span 12">
+      <img class="zoomable" src="assets/case-konstruktor-usability.png" alt="Юзабилити-тестирование: задание на создание курса" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
+      <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Юзабилити-тестирование конструктора курсов</div>
+    </div>
+
     <section class="cell s12" id="itog">
       <span class="cell-kicker">Итог</span>
       <div class="nums" style="grid-template-columns:repeat(4,1fr)">
