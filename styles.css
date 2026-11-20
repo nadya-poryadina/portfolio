@@ -525,6 +525,18 @@ a { color: inherit; }
 .ctx-ci b { font-size: var(--text-m); color: var(--ink); font-weight: 500; line-height: 1.4; }
 @media (max-width: 900px) { .ctx-row { grid-template-columns: 1fr; } }
 
+/* Таблица юзабилити-тестирования */
+.utable-wrap { grid-column: span 12; }
+.utable { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.45; }
+.utable th { text-align: left; font-weight: 500; color: var(--ink); background: var(--bg); padding: 10px 12px; border-bottom: 1px solid var(--line); }
+.utable td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--ink); }
+.utable tr:last-child td { border-bottom: none; }
+.utable td:first-child { min-width: 180px; }
+@media (max-width: 900px) {
+  .utable-wrap { overflow-x: auto; }
+  .utable { min-width: 900px; }
+}
+
 .side-nav a.nav-active { color: var(--ink); font-weight: 500; position: relative; }
 .side-nav a.nav-active::before { content: ''; position: absolute; left: -14px; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; border-radius: 50%; background: var(--ink); }
 .proj-top.mockup img { margin-bottom: 0; }

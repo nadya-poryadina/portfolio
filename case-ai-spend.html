@@ -8,12 +8,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v65">
+  <link rel="stylesheet" href="styles.css?v66">
   <style>
   .cell-kicker{font-size:24px;line-height:1.2;color:var(--ink);text-transform:none;letter-spacing:normal;font-weight:500}     .list p{font-size:16px;color:var(--ink)}
     .sub-head{font-weight:500;color:var(--ink);margin-top:8px}
     .acc{border:1px solid var(--line);border-radius:var(--radius-in);overflow:hidden}
     .acc + .acc{margin-top:10px}
+    #usability-table .acc{border:none;border-radius:0}
+    #usability-table .ut-toggle{width:34px;height:34px;padding:0;border:none;background:transparent;border-radius:50%;justify-content:center}
+    #usability-table .ut-toggle:hover{background:var(--bg)}
+    #usability-table .ut-toggle .acc-icon::before,#usability-table .ut-toggle .acc-icon::after{display:none}
+    #usability-table .ut-toggle .acc-icon{width:11px;height:11px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg);transition:transform .25s}
+    #usability-table .acc.open .ut-toggle .acc-icon{transform:rotate(225deg)}
     .acc-head{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border:none;background:transparent;cursor:pointer;font:inherit;font-size:16px;font-weight:500;color:var(--ink);text-align:left}
     .acc-head:hover{background:var(--bg)}
     .acc-icon{position:relative;width:14px;height:14px;flex:none}
@@ -50,6 +56,7 @@
       <a href="#concepts">Подбор стиля и визуального оформления</a>
       <a href="#wireframes">Вайфрейминг</a>
       <a href="#outcomes">Результат</a>
+      <a href="#usability-table">Юзабилити-тестирование: гипотезы и задания</a>
       <a href="#usability-results">Что показало юзабилити-тестирование</a>
       <a href="#learnings">Чему меня научил этот проект</a>
     </nav>
@@ -413,6 +420,31 @@
       <img class="zoomable" src="assets/case-ai-spend-manager-request-view.png" alt="Просмотр заявки со стороны менеджера" style="cursor:zoom-in;width:calc(100% - 24px);height:auto;display:block;border-radius:24px;outline:12px solid #252525;outline-offset:0;margin:12px auto">
       <div style="text-align:center;font-size:14px;color:var(--ink);padding-top:2px">Просмотр заявки со стороны менеджера</div>
     </div>
+
+    <section class="cell s12" id="usability-table">
+      <div class="acc">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <span class="cell-kicker" style="margin:0">Юзабилити-тестирование: гипотезы и задания</span>
+        <button class="acc-head ut-toggle" type="button" aria-label="Раскрыть таблицу"><span class="acc-icon"></span></button>
+      </div>
+        <div class="acc-body"><div class="acc-inner" style="padding:14px 0 0">
+      <div class="utable-wrap">
+      <table class="utable">
+        <thead><tr><th>Гипотеза</th><th>Что проверяем</th><th>Задание</th><th>Критерии успеха</th><th>Результат</th></tr></thead>
+        <tbody>
+        <tr><td>Пользователь понимает назначение черновиков и может сохранить чеки для последующего оформления.</td><td>Понимает ли пользователь, куда загружать чеки. Может ли сохранить их без создания заявки.</td><td>Вы находитесь в командировке. У вас накопилось несколько чеков за рабочие расходы, но пока вы не хотите оформлять возмещение. Сохраните чеки, чтобы вернуться к ним позже.</td><td>4 из 5 самостоятельно сохраняют чеки в черновики.</td><td><b>5 из 5 справились.</b></td></tr>
+        <tr><td>Пользователь понимает, как найти сохранённые ранее чеки и использовать их для оформления заявки на возмещение расходов.</td><td>Может ли пользователь самостоятельно найти черновики, выбрать нужные чеки, проверить распознанные данные и оформить по ним заявку на возмещение.</td><td>Вы вернулись из командировки, у вас есть чеки, которые вы сохранили ранее. Создайте заявки по ранее сохранённым черновикам.</td><td>4 из 5 пользователей самостоятельно находят сохранённые чеки, выбирают их, проверяют данные и успешно отправляют заявку на возмещение без подсказок.</td><td><b>5 из 5 справились.</b></td></tr>
+        <tr><td>Пользователь понимает, как создать новую заявку на возмещение.</td><td>Поиск точки входа и понимание вариантов создания заявки.</td><td>У вас накопилось также несколько новых чеков за рабочие расходы. Вы хотите вернуть потраченные деньги. Покажите, как бы вы это сделали.</td><td>4 из 5 самостоятельно находят создание заявки и начинают оформление без подсказки.</td><td><b>5 из 5 справились.</b></td></tr>
+        <tr><td>Пользователь может самостоятельно загрузить чеки и проверить распознанные данные.</td><td>Загрузка документов, распознавание, корректировка данных и категорий.</td><td>Продолжите оформление заявки. Проверьте информацию по чекам перед отправкой.</td><td>4 из 5 замечают ошибку в категории и исправляют (чек попал не в ту категорию).</td><td><b>5 из 5 справились.</b> Один респондент сказал, что при переводе в другую категорию ожидал сначала увидеть drag&amp;-and-drop, но проблем с нахождением функции не возникло.</td></tr>
+        <tr><td>Сотрудник понимает, как обработать заявку, возвращённую менеджером на уточнение, и повторно отправить её на рассмотрение.</td><td>Может ли пользователь самостоятельно найти заявку, требующую уточнения, через дашборд или общий список заявок. Замечает ли изменение статуса и комментарий менеджера. Понимает ли, какую информацию необходимо дополнить. Может ли внести изменения и повторно отправить заявку на рассмотрение.</td><td>Через некоторое время решили проверить, на каком этапе находится рассмотрение. Посмотрите, есть ли заявки, по которым от вас требуются дополнительные действия.</td><td>4 из 5 самостоятельно находят и вносят требуемые уточнения и отправляют заявку на повторное рассмотрение.</td><td><b>3 из 5 справились,</b> но у двоих была проблема: не понимали, как удалить лишние пункты. Они понимали, что конкретно от них требуется, но возникла трудность с нахождением кнопки «Изменить» именно в блоке «детализация чека».</td></tr>
+        <tr><td>Пользователь замечает возможность создания заявки через AI-помощника.</td><td>Обнаруживает ли помощника, понимает ли его назначение и ожидаемый принцип работы.</td><td>Вы забыли оформить ещё несколько чеков по рабочим расходам. Посмотрите, каким ещё способом можно оформить заявку.</td><td>4 из 5 замечают AI-помощника и могут объяснить, для чего он нужен.</td><td><b>5 из 5 справились.</b></td></tr>
+        <tr><td>Пользователь может найти заявку и определить её текущий статус.</td><td>Понимает ли пользователь таблицу, поиск, фильтры и статусы заявок.</td><td>Вы ранее отправили заявку за проживание в гостинице. Найдите её и выясните, что сейчас с ней происходит.</td><td>4 из 5 самостоятельно находят заявку и правильно определяют её статус.</td><td><b>5 из 5 справились.</b></td></tr>
+        </tbody>
+      </table>
+      </div>
+        </div></div>
+      </div>
+    </section>
 
     <section class="cell s12" id="usability-results">
       <span class="cell-kicker">Что показало юзабилити-тестирование</span>
