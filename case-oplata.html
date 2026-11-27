@@ -499,19 +499,8 @@
     <section class="cell s12">
       <p class="cell-text primary">Благодаря статусам студент может сам проверить, на каком этапе находится оплата, и не обращаться за уточнениями к куратору.</p>
     </section>
-    <div class="carousel" style="grid-column:span 12;position:relative;border-radius:24px;overflow:hidden">
-      <div class="carousel-track" style="display:flex;transition:transform .4s ease">
-        <img src="assets/case-oplata-screen-6.png" alt="Добавить квитанцию" style="width:100%;flex:0 0 100%;display:block">
-        <img src="assets/case-oplata-screen-7.png" alt="Таблица заявок на подтверждение" style="width:100%;flex:0 0 100%;display:block">
-      </div>
-      <button onclick="carGo(this,-1)" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8249;</button>
-      <button onclick="carGo(this,1)" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.9);cursor:pointer;font-size:18px;box-shadow:0 2px 10px rgba(0,0,0,.15)">&#8250;</button>
-      <div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:6px">
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:.9"></span>
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:.45"></span>
-        <span class="car-dot" style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:.45"></span>
-      </div>
-    </div>
+    <img class="zoomable" src="assets/case-oplata-screen-6.png" alt="Добавить квитанцию" style="cursor:zoom-in;grid-column:span 12;width:100%;height:auto;display:block;border-radius:24px">
+    <img class="zoomable" src="assets/case-oplata-screen-7.png" alt="Таблица заявок на подтверждение" style="cursor:zoom-in;grid-column:span 12;width:100%;height:auto;display:block;border-radius:24px">
     <section class="cell s12">
       <p class="cell-text primary"><b>Спроектировала интерфейс куратора для работы с платежами.</b> В нём куратор может просматривать информацию о студенте, проверять выставленные счета и историю платежей, сверять поступившие оплаты и подтверждать их. Это позволило перенести проверку платежей из разрозненной коммуникации в единую систему и сделать процесс прозрачнее для сотрудников.</p>
     </section>
@@ -603,17 +592,5 @@
     io.observe(el);
   })();
   </script>
-<script>
-function carGo(btn, dir) {
-  var root = btn.closest(".carousel");
-  var track = root.querySelector(".carousel-track");
-  var slides = track.children.length;
-  var idx = parseInt(root.dataset.idx || "0");
-  idx = Math.min(Math.max(idx + dir, 0), slides - 1);
-  root.dataset.idx = idx;
-  track.style.transform = "translateX(-" + idx * 100 + "%)";
-  root.querySelectorAll(".car-dot").forEach(function (d, i) { d.style.opacity = i === idx ? ".9" : ".45"; });
-}
-</script>
 </body>
 </html>
